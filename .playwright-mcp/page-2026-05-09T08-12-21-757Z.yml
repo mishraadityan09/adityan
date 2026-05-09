@@ -1,0 +1,41 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - button "Toggle menu" [ref=e12]:
+      - text: Menu
+      - img [ref=e13]
+  - generic [ref=e14]:
+    - main [ref=e16]:
+      - generic [ref=e19]:
+        - link "Back to Projects" [ref=e20] [cursor=pointer]:
+          - /url: /en/projects
+          - img [ref=e21]
+          - text: Back to Projects
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - heading "Flight Booking App (FlightsMojo)" [level=1] [ref=e26]
+            - paragraph [ref=e27]: Jul 2025 - Present
+          - generic [ref=e28]:
+            - generic [ref=e30]: Loading 3D…
+            - paragraph [ref=e31]: Drag to rotate · scroll to zoom
+          - paragraph [ref=e32]: Built and shipped the end-to-end FlightsMojo flight booking app for both iOS and Android using Flutter. Implemented multi-GDS flight search (Travelport NDC, Kafila, TripJack), Razorpay payment integration, Firebase/FCM push notifications, GA4 analytics with logPurchase events, booking confirmation flows, and offline connectivity overlays. Managed full App Store and Play Store submission cycles including rejection resolution.
+          - generic [ref=e33]:
+            - paragraph [ref=e34]: Tech Stack
+            - generic [ref=e35]:
+              - generic [ref=e36]: Flutter
+              - generic [ref=e37]: iOS
+              - generic [ref=e38]: Android
+              - generic [ref=e39]: Firebase
+              - generic [ref=e40]: Razorpay
+              - generic [ref=e41]: GA4
+    - contentinfo [ref=e42]:
+      - paragraph [ref=e43]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e44]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e50] [cursor=pointer]:
+    - img [ref=e51]
+  - alert [ref=e54]

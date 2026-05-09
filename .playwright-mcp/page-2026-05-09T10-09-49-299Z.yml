@@ -1,0 +1,70 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - generic [ref=e10]:
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+        - generic [ref=e15]: Theme
+      - link "VI" [ref=e17] [cursor=pointer]:
+        - /url: /en
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - complementary [ref=e22]:
+        - navigation [ref=e23]:
+          - link "Introduction" [ref=e24] [cursor=pointer]:
+            - /url: /en
+          - link "Projects" [ref=e25] [cursor=pointer]:
+            - /url: /en/projects
+          - link "Skills & Tools" [ref=e26] [cursor=pointer]:
+            - /url: /en/skillstools
+          - link "Experience" [ref=e27] [cursor=pointer]:
+            - /url: /en/experience
+          - link "Contact" [ref=e28] [cursor=pointer]:
+            - /url: /en/contact
+      - main [ref=e29]:
+        - generic [ref=e32]:
+          - link "Back to Projects" [ref=e33] [cursor=pointer]:
+            - /url: /en/projects
+            - img [ref=e34]
+            - text: Back to Projects
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - generic [ref=e39]:
+                - heading "FlightsMojo Web Booking" [level=1] [ref=e40]
+                - paragraph [ref=e41]: 2025 - In development
+              - link "uat.flightsmojo.in" [ref=e43] [cursor=pointer]:
+                - /url: https://uat.flightsmojo.in/
+                - img [ref=e44]
+                - generic [ref=e49]: uat.flightsmojo.in
+            - generic [ref=e50]:
+              - img "Flight search" [ref=e52]
+              - paragraph [ref=e53]: Flight search
+            - paragraph [ref=e54]: Building the FlightsMojo flight booking web platform in Next.js — the desktop counterpart to the Flutter mobile app. Currently in active UAT development. Implements responsive flight search across multiple GDS sources, fare comparison, currency localisation, Trip-Shield protection upsell, AI-powered fare alerts, and 24×7 customer support flows. Same brand system and search experience as the mobile app, designed mobile-first and scaling up to wide desktop layouts.
+            - generic [ref=e55]:
+              - paragraph [ref=e56]: Tech Stack
+              - generic [ref=e57]:
+                - generic [ref=e58]: Next.js
+                - generic [ref=e59]: App Router
+                - generic [ref=e60]: TypeScript
+                - generic [ref=e61]: Multi-GDS
+                - generic [ref=e62]: i18n
+                - generic [ref=e63]: Responsive
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - heading "Screens" [level=2] [ref=e66]
+              - paragraph [ref=e67]:
+                - generic [ref=e68]: 1 screen
+            - figure "Offers & flash deals" [ref=e70]:
+              - img "Offers & flash deals" [ref=e72]
+              - generic [ref=e73]: Offers & flash deals
+    - contentinfo [ref=e74]:
+      - paragraph [ref=e75]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e76]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e82] [cursor=pointer]:
+    - img [ref=e83]
+  - alert [ref=e86]

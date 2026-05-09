@@ -1,0 +1,302 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation "Page Header" [ref=e3]:
+      - link "Google Play logo" [ref=e4] [cursor=pointer]:
+        - /url: /store/games
+        - img [ref=e5]
+        - generic [ref=e12]: google_logo Play
+      - navigation "Main" [ref=e14]:
+        - tablist [ref=e16]:
+          - generic [ref=e19]:
+            - tab "Games" [ref=e20] [cursor=pointer]:
+              - generic:
+                - generic: Games
+            - tab "Apps" [selected] [ref=e22] [cursor=pointer]:
+              - generic:
+                - generic: Apps
+            - tab "Books" [ref=e24] [cursor=pointer]:
+              - generic:
+                - generic: Books
+            - tab "Kids" [ref=e26] [cursor=pointer]:
+              - generic:
+                - generic: Kids
+      - generic [ref=e28]:
+        - button "Search" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: search
+        - button "Help Center" [ref=e33] [cursor=pointer]:
+          - generic [ref=e34]: help_outline
+        - button "Open account menu" [ref=e39] [cursor=pointer]:
+          - img [ref=e40]
+  - generic [ref=e45]:
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - img [ref=e51]
+          - img [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e56]:
+            - 'heading "FlightsMojo: Cheap Flights" [level=1] [ref=e58]'
+            - link "Niamy Interactive Private Limited" [ref=e61] [cursor=pointer]:
+              - /url: /store/apps/developer?id=Niamy+Interactive+Private+Limited
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - generic "Rated 2.8 stars out of five stars" [ref=e68]:
+                - text: "2.8"
+                - generic [ref=e69]: star
+              - generic [ref=e70]: 41 reviews
+            - generic [ref=e71]:
+              - generic [ref=e72]: 10K+
+              - generic [ref=e73]: Downloads
+      - generic [ref=e74]:
+        - button "Install" [ref=e82]:
+          - generic [ref=e85]: Install
+        - generic [ref=e86]:
+          - button "Share" [ref=e92]:
+            - img [ref=e96]
+            - generic [ref=e98]: Share
+          - button "Add to wishlist" [ref=e104]:
+            - img [ref=e108]
+            - generic [ref=e110]: Add to wishlist
+    - generic [ref=e112]:
+      - generic [ref=e113]:
+        - generic [ref=e114]:
+          - list [ref=e118]:
+            - listitem [ref=e119]:
+              - button "Screenshot image" [ref=e121] [cursor=pointer]
+            - listitem [ref=e122]:
+              - button "Screenshot image" [ref=e124] [cursor=pointer]
+            - listitem [ref=e125]:
+              - button "Screenshot image" [ref=e127] [cursor=pointer]
+            - listitem [ref=e128]:
+              - button "Screenshot image" [ref=e130] [cursor=pointer]
+            - listitem [ref=e131]:
+              - button "Screenshot image" [ref=e133] [cursor=pointer]
+          - generic [ref=e136]:
+            - generic [ref=e138]:
+              - heading "About this app" [level=2] [ref=e140]
+              - button "See more information on About this app" [ref=e142] [cursor=pointer]:
+                - generic [ref=e143]: arrow_forward
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - text: FlightsMojo – Built for Better Flight Fares
+                - text: FlightsMojo is a flights-first booking app designed exclusively for airline ticket bookings. While most travel apps bundle everything together, we focus only on flights — so every feature is optimized to help you search, compare, and book smarter.
+              - generic [ref=e147]:
+                - generic [ref=e148]: Updated on
+                - generic [ref=e149]: May 4, 2026
+              - generic [ref=e152]:
+                - generic [ref=e154]: Travel & Local
+                - link "Travel & Local" [ref=e155] [cursor=pointer]:
+                  - /url: /store/apps/category/TRAVEL_AND_LOCAL
+          - generic [ref=e157]:
+            - generic [ref=e159]:
+              - heading "Data safety" [level=2] [ref=e161]
+              - generic [ref=e162] [cursor=pointer]:
+                - generic [ref=e163]: arrow_forward
+                - link "See more information on Data safety" [ref=e164]:
+                  - /url: /store/apps/datasafety?id=com.flightsmojo
+            - generic [ref=e165]:
+              - text: Safety starts with understanding how developers collect and share your data. Data privacy and security practices may vary based on your use, region, and age. The developer provided this information and may update it over time.
+              - generic [ref=e166]:
+                - generic [ref=e167]:
+                  - img [ref=e168]
+                  - generic [ref=e169]:
+                    - text: This app may share these data types with third parties
+                    - generic [ref=e170]: Location and Personal info
+                - generic [ref=e171]:
+                  - img [ref=e172]
+                  - generic [ref=e173]:
+                    - text: This app may collect these data types
+                    - generic [ref=e174]: Location and Personal info
+                - generic [ref=e175]:
+                  - img [ref=e176]
+                  - generic [ref=e177]: Data is encrypted in transit
+                - generic [ref=e180]:
+                  - generic [ref=e182]: See details
+                  - link "See more details on data safety" [ref=e183] [cursor=pointer]:
+                    - /url: /store/apps/datasafety?id=com.flightsmojo
+          - generic [ref=e185]:
+            - generic [ref=e187]:
+              - heading "Ratings and reviews" [level=2] [ref=e189]
+              - button "See more information on Ratings and reviews" [ref=e191] [cursor=pointer]:
+                - generic [ref=e192]: arrow_forward
+              - button "Ratings and reviews are verified" [ref=e196]:
+                - generic [ref=e199]: Ratings and reviews are verified
+                - generic [ref=e200]: info_outline
+            - generic [ref=e201]:
+              - button "Phone" [pressed] [ref=e205] [cursor=pointer]:
+                - generic [ref=e207]:
+                  - generic [ref=e209]: phone_android
+                  - generic [ref=e210]: Phone
+              - generic [ref=e211]:
+                - generic [ref=e214]:
+                  - generic [ref=e215]:
+                    - generic [ref=e216]: "2.8"
+                    - img "Rated 2.8 stars out of five stars" [ref=e217]:
+                      - img [ref=e220]
+                      - img [ref=e226]
+                      - img [ref=e232]
+                      - img [ref=e238]
+                      - img [ref=e244]
+                    - generic [ref=e248]: 41 reviews
+                  - generic [ref=e249]:
+                    - img "15 reviews for star rating 5" [ref=e250]:
+                      - generic [ref=e251]: "5"
+                    - img "2 reviews for star rating 4" [ref=e254]:
+                      - generic [ref=e255]: "4"
+                    - img "4 reviews for star rating 3" [ref=e258]:
+                      - generic [ref=e259]: "3"
+                    - img "0 reviews for star rating 2" [ref=e262]:
+                      - generic [ref=e263]: "2"
+                    - img "20 reviews for star rating 1" [ref=e265]:
+                      - generic [ref=e266]: "1"
+                - generic [ref=e269]:
+                  - generic [ref=e270]:
+                    - generic [ref=e271]:
+                      - generic [ref=e272]:
+                        - img [ref=e273]
+                        - generic [ref=e274]: Sai Khavle
+                      - button "More review actions" [ref=e278] [cursor=pointer]:
+                        - generic [ref=e279]: more_vert
+                    - generic [ref=e280]:
+                      - img "Rated 1 stars out of five stars" [ref=e281]:
+                        - img [ref=e284]
+                        - img [ref=e290]
+                        - img [ref=e296]
+                        - img [ref=e302]
+                        - img [ref=e308]
+                      - text: April 30, 2026
+                  - generic [ref=e312]: I booked the tickets over a month in advance to get a good deal, inspite of all my instincts to not use these sites I booked the ticket from here. Only for it to get cancelled 10 days before the trip and me being forced to pay twice the amount I would have otherwise. There is no support from customer care as well how to go ahead with the refund etc. really scary affair
+                  - generic [ref=e313]:
+                    - generic [ref=e314]: 2 people found this review helpful
+                    - generic [ref=e315]:
+                      - generic [ref=e316]: Did you find this helpful?
+                      - generic [ref=e318]:
+                        - button "Yes" [ref=e319] [cursor=pointer]:
+                          - generic [ref=e322]: "Yes"
+                        - button "No" [ref=e323] [cursor=pointer]:
+                          - generic [ref=e326]: "No"
+                - generic [ref=e327]:
+                  - generic [ref=e328]:
+                    - generic [ref=e329]:
+                      - generic [ref=e330]:
+                        - img [ref=e331]
+                        - generic [ref=e332]: Kamal kant Meena
+                      - button "More review actions" [ref=e336] [cursor=pointer]:
+                        - generic [ref=e337]: more_vert
+                    - generic [ref=e338]:
+                      - img "Rated 1 stars out of five stars" [ref=e339]:
+                        - img [ref=e342]
+                        - img [ref=e348]
+                        - img [ref=e354]
+                        - img [ref=e360]
+                        - img [ref=e366]
+                      - text: April 13, 2026
+                  - generic [ref=e370]: I strongly advise to all for Not to book air ticket through this site. I have booked but not yet received any confirmation. app saying that you will get confirmation just before 12 hours of travel. why before 12 hours. it not get confirmation then who is responsible, absolutely no one. this is a fake, fraud, scam, false site.
+                  - generic [ref=e371]:
+                    - generic [ref=e372]: 3 people found this review helpful
+                    - generic [ref=e373]:
+                      - generic [ref=e374]: Did you find this helpful?
+                      - generic [ref=e376]:
+                        - button "Yes" [ref=e377] [cursor=pointer]:
+                          - generic [ref=e380]: "Yes"
+                        - button "No" [ref=e381] [cursor=pointer]:
+                          - generic [ref=e384]: "No"
+                - generic [ref=e385]:
+                  - generic [ref=e386]:
+                    - generic [ref=e387]:
+                      - generic [ref=e388]:
+                        - img [ref=e389]
+                        - generic [ref=e390]: Zeeshan Sayed
+                      - button "More review actions" [ref=e394] [cursor=pointer]:
+                        - generic [ref=e395]: more_vert
+                    - generic [ref=e396]:
+                      - img "Rated 1 stars out of five stars" [ref=e397]:
+                        - img [ref=e400]
+                        - img [ref=e406]
+                        - img [ref=e412]
+                        - img [ref=e418]
+                        - img [ref=e424]
+                      - text: April 10, 2026
+                  - generic [ref=e428]: Warning – My Experience with Mojo I strongly advise everyone to avoid booking flight tickets or any services through Mojo. My ticket got rejected, and since then, I’ve been struggling to get a clear response regarding the refund. There is no proper timeline, no transparency, and no accountability from their side. Because of this, my money is stuck, and it has become a very frustrating experience. Customer support has not been helpful in providing a clear resolution. Please be careful.
+                  - generic [ref=e429]:
+                    - generic [ref=e430]: 1 person found this review helpful
+                    - generic [ref=e431]:
+                      - generic [ref=e432]: Did you find this helpful?
+                      - generic [ref=e434]:
+                        - button "Yes" [ref=e435] [cursor=pointer]:
+                          - generic [ref=e438]: "Yes"
+                        - button "No" [ref=e439] [cursor=pointer]:
+                          - generic [ref=e442]: "No"
+                - button "See all reviews" [ref=e446]:
+                  - generic [ref=e449]: See all reviews
+          - generic [ref=e451]:
+            - heading "What’s new" [level=2] [ref=e455]
+            - generic [ref=e457]:
+              - text: New OTP-based login for a secure and seamless experience
+              - text: Save passenger details for quicker bookings
+              - text: View and manage your bookings with ease
+              - text: Delete your account directly from the Settings section
+              - text: Performance improvements and bug fixe
+        - link "Flag as inappropriate" [ref=e461] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay/?p=report_content
+          - generic [ref=e462]: flag
+          - text: Flag as inappropriate
+      - generic [ref=e463]:
+        - generic [ref=e464]:
+          - img "Content rating" [ref=e465]
+          - generic [ref=e466]:
+            - generic [ref=e467]: Rated for 3+
+            - link "Learn more about content ratings" [ref=e468] [cursor=pointer]:
+              - /url: https://support.google.com/googleplay?p=appgame_ratings
+              - text: Learn more
+        - generic [ref=e472]:
+          - heading "App support" [level=2] [ref=e474]
+          - button "Expand" [ref=e476] [cursor=pointer]:
+            - generic [ref=e477]: expand_more
+  - contentinfo [ref=e479]:
+    - generic [ref=e481]:
+      - generic [ref=e483]:
+        - text: Google Play
+        - link "Play Pass" [ref=e485] [cursor=pointer]:
+          - /url: /store/pass/getstarted
+          - paragraph [ref=e486]: Play Pass
+        - link "Play Points" [ref=e488] [cursor=pointer]:
+          - /url: /store/points/enroll
+          - paragraph [ref=e489]: Play Points
+        - link "Gift cards" [ref=e491] [cursor=pointer]:
+          - /url: https://play.google.com/about/giftcards
+          - paragraph [ref=e492]: Gift cards
+        - link "Redeem" [ref=e494] [cursor=pointer]:
+          - /url: /redeem
+          - paragraph [ref=e495]: Redeem
+        - link "Refund policy" [ref=e497] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay/answer/134336
+          - paragraph [ref=e498]: Refund policy
+      - generic [ref=e500]:
+        - text: Kids & family
+        - link "Parent Guide" [ref=e502] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay?p=pff_parentguide
+          - paragraph [ref=e503]: Parent Guide
+        - link "Family sharing" [ref=e505] [cursor=pointer]:
+          - /url: https://support.google.com/googleplay/answer/7007852
+          - paragraph [ref=e506]: Family sharing
+    - generic [ref=e507]:
+      - link "Terms of Service" [ref=e509] [cursor=pointer]:
+        - /url: https://play.google.com/intl/en-US_in/about/play-terms.html
+        - paragraph [ref=e510]: Terms of Service
+      - link "Privacy" [ref=e512] [cursor=pointer]:
+        - /url: https://policies.google.com/privacy
+        - paragraph [ref=e513]: Privacy
+      - link "About Google Play" [ref=e515] [cursor=pointer]:
+        - /url: https://support.google.com/googleplay/?p=about_play
+        - paragraph [ref=e516]: About Google Play
+      - link "Developers" [ref=e518] [cursor=pointer]:
+        - /url: http://developer.android.com/index.html
+        - paragraph [ref=e519]: Developers
+      - link "Google Store" [ref=e521] [cursor=pointer]:
+        - /url: https://store.google.com/?playredirect=true&utm_source=play&utm_medium=google_oo&utm_campaign=GS106288
+        - paragraph [ref=e522]: Google Store
+      - generic [ref=e523]: All prices include GST.
+      - generic [ref=e525]:
+        - img [ref=e526]
+        - generic [ref=e527]: India (English (United States))

@@ -1,0 +1,78 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - button "Toggle menu" [ref=e12]:
+      - text: Menu
+      - img [ref=e13]
+  - generic [ref=e14]:
+    - main [ref=e16]:
+      - generic [ref=e19]:
+        - link "Back to Projects" [ref=e20] [cursor=pointer]:
+          - /url: /en/projects
+          - img [ref=e21]
+          - text: Back to Projects
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - generic [ref=e25]:
+              - heading "NxFlow — Task & Project Management App" [level=1] [ref=e26]
+              - paragraph [ref=e27]: 2025 - Present
+            - generic [ref=e28]:
+              - link "Download on App Store" [ref=e29] [cursor=pointer]:
+                - /url: https://apps.apple.com/in/app/nxflow/id6760958647
+                - img [ref=e30]
+                - generic [ref=e32]:
+                  - generic [ref=e33]: Download on
+                  - generic [ref=e34]: App Store
+              - link "Get it on Google Play" [ref=e35] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.nxflow
+                - img [ref=e36]
+                - generic [ref=e38]:
+                  - generic [ref=e39]: Get it on
+                  - generic [ref=e40]: Google Play
+          - generic [ref=e41]:
+            - img "Onboarding" [ref=e43]
+            - paragraph [ref=e44]: Onboarding
+          - paragraph [ref=e45]: Cross-platform task and project management app built in React Native (0.83, Hermes + new architecture) for iOS and Android. Implemented mobile + 6-digit MPIN authentication with secure Keychain storage and silent background token refresh, role-based access control across super-admin / project-admin / project-member roles, a 4-tab navigation (Tasks, Calendar, Projects, Profile) with lazy-loaded screens behind error boundaries and skeleton fallbacks, optimistic state updates, and a 30s in-memory cache backing the unified tasks + projects fetch. All sizing flows through a metrics scale (horizontalScale / verticalScale / moderateScale) for true responsive design across devices.
+          - generic [ref=e46]:
+            - paragraph [ref=e47]: Tech Stack
+            - generic [ref=e48]:
+              - generic [ref=e49]: React Native
+              - generic [ref=e50]: React Navigation
+              - generic [ref=e51]: Keychain
+              - generic [ref=e52]: TypeScript
+              - generic [ref=e53]: REST API
+              - generic [ref=e54]: Hermes
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - heading "Screens" [level=2] [ref=e57]
+            - paragraph [ref=e58]: Swipe
+          - generic [ref=e59]:
+            - figure "Mobile + MPIN auth" [ref=e60]:
+              - img "Mobile + MPIN auth" [ref=e62]
+              - generic [ref=e63]: Mobile + MPIN auth
+            - figure "Tasks dashboard" [ref=e64]:
+              - img "Tasks dashboard" [ref=e66]
+              - generic [ref=e67]: Tasks dashboard
+            - figure "Month-view calendar" [ref=e68]:
+              - img "Month-view calendar" [ref=e70]
+              - generic [ref=e71]: Month-view calendar
+            - figure "Projects directory" [ref=e72]:
+              - img "Projects directory" [ref=e74]
+              - generic [ref=e75]: Projects directory
+            - figure "Profile & settings" [ref=e76]:
+              - img "Profile & settings" [ref=e78]
+              - generic [ref=e79]: Profile & settings
+            - figure "Admin user management" [ref=e80]:
+              - img "Admin user management" [ref=e82]
+              - generic [ref=e83]: Admin user management
+    - contentinfo [ref=e84]:
+      - paragraph [ref=e85]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e86]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e92] [cursor=pointer]:
+    - img [ref=e93]
+  - alert [ref=e96]

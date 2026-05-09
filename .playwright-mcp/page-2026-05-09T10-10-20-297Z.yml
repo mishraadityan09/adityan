@@ -1,0 +1,91 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - generic [ref=e10]:
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+        - generic [ref=e15]: Theme
+      - link "VI" [ref=e17] [cursor=pointer]:
+        - /url: /en
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - complementary [ref=e22]:
+        - navigation [ref=e23]:
+          - link "Introduction" [ref=e24] [cursor=pointer]:
+            - /url: /en
+          - link "Projects" [ref=e25] [cursor=pointer]:
+            - /url: /en/projects
+            - text: Projects
+          - link "Skills & Tools" [ref=e27] [cursor=pointer]:
+            - /url: /en/skillstools
+          - link "Experience" [ref=e28] [cursor=pointer]:
+            - /url: /en/experience
+          - link "Contact" [ref=e29] [cursor=pointer]:
+            - /url: /en/contact
+      - main [ref=e30]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - heading "Projects" [level=1] [ref=e34]
+            - heading "A collection of real-world projects I've built, tracking my progress from the first lines of code to full-stack systems." [level=3] [ref=e35]
+          - generic [ref=e36]:
+            - link "FlightsMojo — Flight Booking App (Flutter) End-to-end flight booking app for iOS & Android. Multi-GDS search (Travelport NDC, Kafila, TripJack), Razorpay payments, Firebase/FCM push notifications, GA4 analytics, and full App Store / Play Store release cycles." [ref=e37] [cursor=pointer]:
+              - /url: /en/projects/flightsmojo
+              - generic [ref=e39]:
+                - paragraph [ref=e40]: FlightsMojo — Flight Booking App (Flutter)
+                - paragraph [ref=e41]: End-to-end flight booking app for iOS & Android. Multi-GDS search (Travelport NDC, Kafila, TripJack), Razorpay payments, Firebase/FCM push notifications, GA4 analytics, and full App Store / Play Store release cycles.
+            - link "NxFlow — Task & Project Management App (React Native) Cross-platform task and project management app for iOS & Android. Mobile + 6-digit MPIN auth with secure Keychain storage, auto-refresh tokens, role-based access (super-admin / project-admin / project-member), 4-tab navigation, optimistic updates, and a 30s in-memory cache backing the tasks + projects feed." [ref=e42] [cursor=pointer]:
+              - /url: /en/projects/nxflow
+              - generic [ref=e44]:
+                - paragraph [ref=e45]: NxFlow — Task & Project Management App (React Native)
+                - paragraph [ref=e46]: Cross-platform task and project management app for iOS & Android. Mobile + 6-digit MPIN auth with secure Keychain storage, auto-refresh tokens, role-based access (super-admin / project-admin / project-member), 4-tab navigation, optimistic updates, and a 30s in-memory cache backing the tasks + projects feed.
+            - link "Help Center Website — help.flightsmojo.in Customer support portal built with Next.js App Router. SEO optimization, dynamic routing, Zendesk integration, and a custom chatbot for omnichannel support routing." [ref=e47] [cursor=pointer]:
+              - /url: /en/projects/help-center
+              - generic [ref=e49]:
+                - paragraph [ref=e50]: Help Center Website — help.flightsmojo.in
+                - paragraph [ref=e51]: Customer support portal built with Next.js App Router. SEO optimization, dynamic routing, Zendesk integration, and a custom chatbot for omnichannel support routing.
+            - link "FlightsMojo Web Booking — flightsmojo.in (in development) Desktop counterpart to the FlightsMojo mobile app. Next.js flight booking web platform with multi-GDS search, fare comparison, currency localisation, Trip-Shield upsell, AI-powered fare alerts. Currently in active UAT development." [ref=e52] [cursor=pointer]:
+              - /url: /en/projects/flightsmojo-web
+              - generic [ref=e54]:
+                - paragraph [ref=e55]: FlightsMojo Web Booking — flightsmojo.in (in development)
+                - paragraph [ref=e56]: Desktop counterpart to the FlightsMojo mobile app. Next.js flight booking web platform with multi-GDS search, fare comparison, currency localisation, Trip-Shield upsell, AI-powered fare alerts. Currently in active UAT development.
+            - link "TripShield Website — tripshield.flightsmojo.in Travel protection product landing and onboarding site in Next.js. Includes responsive HTML email templates for booking confirmations, schedule change notifications, and policy communications." [ref=e57] [cursor=pointer]:
+              - /url: /en/projects/tripshield
+              - generic [ref=e59]:
+                - paragraph [ref=e60]: TripShield Website — tripshield.flightsmojo.in
+                - paragraph [ref=e61]: Travel protection product landing and onboarding site in Next.js. Includes responsive HTML email templates for booking confirmations, schedule change notifications, and policy communications.
+            - link "3D Interactive Showroom (Babylon.js) Immersive 3D showroom using Babylon.js with real-time material updates and first-person walk-through. Implemented GLB model optimization reducing sizes by 80% while preserving visual fidelity." [ref=e62] [cursor=pointer]:
+              - /url: /en/projects/3d-showroom
+              - generic [ref=e64]:
+                - paragraph [ref=e65]: 3D Interactive Showroom (Babylon.js)
+                - paragraph [ref=e66]: Immersive 3D showroom using Babylon.js with real-time material updates and first-person walk-through. Implemented GLB model optimization reducing sizes by 80% while preserving visual fidelity.
+            - link "WiFi Service Application (Next.js) Full-stack Next.js app for a WiFi provider with user and admin dashboards. Lead generation, customer onboarding, subscription management, and ticket support with Tailwind CSS + MUI." [ref=e67] [cursor=pointer]:
+              - /url: /en/projects/wifi-service
+              - generic [ref=e69]:
+                - paragraph [ref=e70]: WiFi Service Application (Next.js)
+                - paragraph [ref=e71]: Full-stack Next.js app for a WiFi provider with user and admin dashboards. Lead generation, customer onboarding, subscription management, and ticket support with Tailwind CSS + MUI.
+            - link "3D Model Viewer (Babylon.js) Interactive 3D model viewer displaying mesh properties, texture visualization, and real-time material adjustments for model assessment and quality verification." [ref=e72] [cursor=pointer]:
+              - /url: /en/projects/3d-viewer
+              - generic [ref=e74]:
+                - paragraph [ref=e75]: 3D Model Viewer (Babylon.js)
+                - paragraph [ref=e76]: Interactive 3D model viewer displaying mesh properties, texture visualization, and real-time material adjustments for model assessment and quality verification.
+            - link "Healthcare Platform (React Native + Next.js) Cross-platform healthcare app for doctors to manage appointments, track patient status, and maintain EHRs — built in React Native for mobile and Next.js for web." [ref=e77] [cursor=pointer]:
+              - /url: /en/projects/healthcare-platform
+              - generic [ref=e79]:
+                - paragraph [ref=e80]: Healthcare Platform (React Native + Next.js)
+                - paragraph [ref=e81]: Cross-platform healthcare app for doctors to manage appointments, track patient status, and maintain EHRs — built in React Native for mobile and Next.js for web.
+            - link "Siloho Camera App (React Native) Hybrid mobile camera app for interior design documentation. Custom gallery integration, specialized photography tools, and direct client sharing workflows." [ref=e82] [cursor=pointer]:
+              - /url: /en/projects/siloho-camera
+              - generic [ref=e84]:
+                - paragraph [ref=e85]: Siloho Camera App (React Native)
+                - paragraph [ref=e86]: Hybrid mobile camera app for interior design documentation. Custom gallery integration, specialized photography tools, and direct client sharing workflows.
+    - contentinfo [ref=e87]:
+      - paragraph [ref=e88]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e89]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e95] [cursor=pointer]:
+    - img [ref=e96]
+  - alert [ref=e99]

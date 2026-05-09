@@ -1,0 +1,53 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - generic [ref=e10]:
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+        - generic [ref=e15]: Theme
+      - link "VI" [ref=e17] [cursor=pointer]:
+        - /url: /en
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - complementary [ref=e22]:
+        - navigation [ref=e23]:
+          - link "Introduction" [ref=e24] [cursor=pointer]:
+            - /url: /en
+          - link "Projects" [ref=e25] [cursor=pointer]:
+            - /url: /en/projects
+          - link "Skills & Tools" [ref=e26] [cursor=pointer]:
+            - /url: /en/skillstools
+          - link "Experience" [ref=e27] [cursor=pointer]:
+            - /url: /en/experience
+          - link "Contact" [ref=e28] [cursor=pointer]:
+            - /url: /en/contact
+      - main [ref=e29]:
+        - generic [ref=e32]:
+          - link "Back to Projects" [ref=e33] [cursor=pointer]:
+            - /url: /en/projects
+            - img [ref=e34]
+            - text: Back to Projects
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - heading "Help Center Website" [level=1] [ref=e40]
+              - paragraph [ref=e41]: Jul 2025 - Present
+            - paragraph [ref=e42]: Developed a customer support and help center portal using Next.js with App Router. Implemented SEO optimization, dynamic routing, and responsive UI. Integrated with Zendesk for ticket management and built a custom chatbot to replace Zendesk AI for omnichannel support routing.
+            - generic [ref=e43]:
+              - paragraph [ref=e44]: Tech Stack
+              - generic [ref=e45]:
+                - generic [ref=e46]: Next.js
+                - generic [ref=e47]: App Router
+                - generic [ref=e48]: Zendesk
+                - generic [ref=e49]: SEO
+                - generic [ref=e50]: Custom Chatbot
+    - contentinfo [ref=e51]:
+      - paragraph [ref=e52]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e53]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e59] [cursor=pointer]:
+    - img [ref=e60]
+  - alert [ref=e63]

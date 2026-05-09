@@ -1,0 +1,10 @@
+[     939ms] Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at rT (https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:43299)
+    at rL (https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:44332)
+    at https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:126139
+    at ik (https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:131010)
+    at iy (https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:122800)
+    at https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:118787
+    at il (https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:118888)
+    at iq (https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:140985)
+    at MessagePort.T (https://uat.flightsmojo.in/_next/static/chunks/160dfcdacaa219d6.js:1:6417)

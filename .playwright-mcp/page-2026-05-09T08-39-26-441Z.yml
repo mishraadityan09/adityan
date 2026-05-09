@@ -1,0 +1,54 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - generic [ref=e10]:
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+        - generic [ref=e15]: Theme
+      - link "VI" [ref=e17] [cursor=pointer]:
+        - /url: /en
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - complementary [ref=e22]:
+        - navigation [ref=e23]:
+          - link "Introduction" [ref=e24] [cursor=pointer]:
+            - /url: /en
+          - link "Projects" [ref=e25] [cursor=pointer]:
+            - /url: /en/projects
+          - link "Skills & Tools" [ref=e26] [cursor=pointer]:
+            - /url: /en/skillstools
+          - link "Experience" [ref=e27] [cursor=pointer]:
+            - /url: /en/experience
+          - link "Contact" [ref=e28] [cursor=pointer]:
+            - /url: /en/contact
+      - main [ref=e29]:
+        - generic [ref=e32]:
+          - link "Back to Projects" [ref=e33] [cursor=pointer]:
+            - /url: /en/projects
+            - img [ref=e34]
+            - text: Back to Projects
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - heading "NxFlow — Task & Project Management App" [level=1] [ref=e39]
+              - paragraph [ref=e40]: 2025 - Present
+            - paragraph [ref=e41]: Cross-platform task and project management app built in React Native (0.83, Hermes + new architecture) for iOS and Android. Implemented mobile + 6-digit MPIN authentication with secure Keychain storage and silent background token refresh, role-based access control across super-admin / project-admin / project-member roles, a 4-tab navigation (Tasks, Calendar, Projects, Profile) with lazy-loaded screens behind error boundaries and skeleton fallbacks, optimistic state updates, and a 30s in-memory cache backing the unified tasks + projects fetch. All sizing flows through a metrics scale (horizontalScale / verticalScale / moderateScale) for true responsive design across devices.
+            - generic [ref=e42]:
+              - paragraph [ref=e43]: Tech Stack
+              - generic [ref=e44]:
+                - generic [ref=e45]: React Native
+                - generic [ref=e46]: React Navigation
+                - generic [ref=e47]: Keychain
+                - generic [ref=e48]: TypeScript
+                - generic [ref=e49]: REST API
+                - generic [ref=e50]: Hermes
+    - contentinfo [ref=e51]:
+      - paragraph [ref=e52]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e53]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e59] [cursor=pointer]:
+    - img [ref=e60]
+  - alert [ref=e63]

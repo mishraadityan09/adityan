@@ -1,0 +1,81 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - generic [ref=e10]:
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+        - generic [ref=e15]: Theme
+      - link "VI" [ref=e17] [cursor=pointer]:
+        - /url: /en
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - complementary [ref=e22]:
+        - navigation [ref=e23]:
+          - link "Introduction" [ref=e24] [cursor=pointer]:
+            - /url: /en
+          - link "Projects" [ref=e25] [cursor=pointer]:
+            - /url: /en/projects
+          - link "Skills & Tools" [ref=e26] [cursor=pointer]:
+            - /url: /en/skillstools
+          - link "Experience" [ref=e27] [cursor=pointer]:
+            - /url: /en/experience
+          - link "Contact" [ref=e28] [cursor=pointer]:
+            - /url: /en/contact
+      - main [ref=e29]:
+        - generic [ref=e32]:
+          - link "Back to Projects" [ref=e33] [cursor=pointer]:
+            - /url: /en/projects
+            - img [ref=e34]
+            - text: Back to Projects
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - heading "NxFlow — Task & Project Management App" [level=1] [ref=e39]
+              - paragraph [ref=e40]: 2025 - Present
+            - generic [ref=e41]:
+              - img "Onboarding" [ref=e43]
+              - paragraph [ref=e44]: Onboarding
+            - paragraph [ref=e45]: Cross-platform task and project management app built in React Native (0.83, Hermes + new architecture) for iOS and Android. Implemented mobile + 6-digit MPIN authentication with secure Keychain storage and silent background token refresh, role-based access control across super-admin / project-admin / project-member roles, a 4-tab navigation (Tasks, Calendar, Projects, Profile) with lazy-loaded screens behind error boundaries and skeleton fallbacks, optimistic state updates, and a 30s in-memory cache backing the unified tasks + projects fetch. All sizing flows through a metrics scale (horizontalScale / verticalScale / moderateScale) for true responsive design across devices.
+            - generic [ref=e46]:
+              - paragraph [ref=e47]: Tech Stack
+              - generic [ref=e48]:
+                - generic [ref=e49]: React Native
+                - generic [ref=e50]: React Navigation
+                - generic [ref=e51]: Keychain
+                - generic [ref=e52]: TypeScript
+                - generic [ref=e53]: REST API
+                - generic [ref=e54]: Hermes
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - heading "Screens" [level=2] [ref=e57]
+              - paragraph [ref=e58]:
+                - generic [ref=e59]: 6 screens
+            - generic [ref=e60]:
+              - figure "Mobile + MPIN auth" [ref=e61]:
+                - img "Mobile + MPIN auth" [ref=e63]
+                - generic [ref=e64]: Mobile + MPIN auth
+              - figure "Tasks dashboard" [ref=e65]:
+                - img "Tasks dashboard" [ref=e67]
+                - generic [ref=e68]: Tasks dashboard
+              - figure "Month-view calendar" [ref=e69]:
+                - img "Month-view calendar" [ref=e71]
+                - generic [ref=e72]: Month-view calendar
+              - figure "Projects directory" [ref=e73]:
+                - img "Projects directory" [ref=e75]
+                - generic [ref=e76]: Projects directory
+              - figure "Profile & settings" [ref=e77]:
+                - img "Profile & settings" [ref=e79]
+                - generic [ref=e80]: Profile & settings
+              - figure "Admin user management" [ref=e81]:
+                - img "Admin user management" [ref=e83]
+                - generic [ref=e84]: Admin user management
+    - contentinfo [ref=e85]:
+      - paragraph [ref=e86]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e87]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e93] [cursor=pointer]:
+    - img [ref=e94]
+  - alert [ref=e97]

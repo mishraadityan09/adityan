@@ -1,0 +1,61 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - button "Toggle menu" [ref=e12]:
+      - text: Menu
+      - img [ref=e13]
+  - generic [ref=e14]:
+    - main [ref=e16]:
+      - generic [ref=e19]:
+        - link "Back to Projects" [ref=e20] [cursor=pointer]:
+          - /url: /en/projects
+          - img [ref=e21]
+          - text: Back to Projects
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - heading "Flight Booking App (FlightsMojo)" [level=1] [ref=e26]
+            - paragraph [ref=e27]: Jul 2025 - Present
+          - generic [ref=e28]:
+            - generic [ref=e30]: Loading 3D…
+            - paragraph [ref=e31]: Drag to rotate · scroll to zoom
+          - paragraph [ref=e32]: Built and shipped the end-to-end FlightsMojo flight booking app for both iOS and Android using Flutter. Implemented multi-GDS flight search (Travelport NDC, Kafila, TripJack), Razorpay payment integration, Firebase/FCM push notifications, GA4 analytics with logPurchase events, booking confirmation flows, and offline connectivity overlays. Managed full App Store and Play Store submission cycles including rejection resolution.
+          - generic [ref=e33]:
+            - paragraph [ref=e34]: Tech Stack
+            - generic [ref=e35]:
+              - generic [ref=e36]: Flutter
+              - generic [ref=e37]: iOS
+              - generic [ref=e38]: Android
+              - generic [ref=e39]: Firebase
+              - generic [ref=e40]: Razorpay
+              - generic [ref=e41]: GA4
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - heading "Screens" [level=2] [ref=e44]
+            - paragraph [ref=e45]: Swipe
+          - generic [ref=e46]:
+            - figure "Brand splash" [ref=e47]:
+              - img "Brand splash" [ref=e49]
+              - generic [ref=e50]: Brand splash
+            - figure "Flash flight deals" [ref=e51]:
+              - img "Flash flight deals" [ref=e53]
+              - generic [ref=e54]: Flash flight deals
+            - figure "Multi-GDS search results" [ref=e55]:
+              - img "Multi-GDS search results" [ref=e57]
+              - generic [ref=e58]: Multi-GDS search results
+            - figure "Trip Shield protection" [ref=e59]:
+              - img "Trip Shield protection" [ref=e61]
+              - generic [ref=e62]: Trip Shield protection
+            - figure "Razorpay checkout" [ref=e63]:
+              - img "Razorpay checkout" [ref=e65]
+              - generic [ref=e66]: Razorpay checkout
+    - contentinfo [ref=e67]:
+      - paragraph [ref=e68]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e69]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e75] [cursor=pointer]:
+    - img [ref=e76]
+  - alert [ref=e79]

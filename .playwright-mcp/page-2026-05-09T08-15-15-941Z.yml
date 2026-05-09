@@ -1,0 +1,56 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - generic [ref=e10]:
+      - button "Toggle theme" [ref=e12]:
+        - generic [ref=e13]: Theme
+      - link "VI" [ref=e15] [cursor=pointer]:
+        - /url: /en
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - complementary [ref=e20]:
+        - navigation [ref=e21]:
+          - link "Introduction" [ref=e22] [cursor=pointer]:
+            - /url: /en
+          - link "Projects" [ref=e23] [cursor=pointer]:
+            - /url: /en/projects
+          - link "Skills & Tools" [ref=e24] [cursor=pointer]:
+            - /url: /en/skillstools
+          - link "Experience" [ref=e25] [cursor=pointer]:
+            - /url: /en/experience
+          - link "Contact" [ref=e26] [cursor=pointer]:
+            - /url: /en/contact
+      - main [ref=e27]:
+        - generic [ref=e30]:
+          - link "Back to Projects" [ref=e31] [cursor=pointer]:
+            - /url: /en/projects
+            - img [ref=e32]
+            - text: Back to Projects
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - heading "Flight Booking App (FlightsMojo)" [level=1] [ref=e38]
+              - paragraph [ref=e39]: Jul 2025 - Present
+            - generic [ref=e40]:
+              - generic [ref=e42]: Loading 3D…
+              - paragraph [ref=e43]: Drag to rotate · scroll to zoom
+            - paragraph [ref=e44]: Built and shipped the end-to-end FlightsMojo flight booking app for both iOS and Android using Flutter. Implemented multi-GDS flight search (Travelport NDC, Kafila, TripJack), Razorpay payment integration, Firebase/FCM push notifications, GA4 analytics with logPurchase events, booking confirmation flows, and offline connectivity overlays. Managed full App Store and Play Store submission cycles including rejection resolution.
+            - generic [ref=e45]:
+              - paragraph [ref=e46]: Tech Stack
+              - generic [ref=e47]:
+                - generic [ref=e48]: Flutter
+                - generic [ref=e49]: iOS
+                - generic [ref=e50]: Android
+                - generic [ref=e51]: Firebase
+                - generic [ref=e52]: Razorpay
+                - generic [ref=e53]: GA4
+    - contentinfo [ref=e54]:
+      - paragraph [ref=e55]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e56]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e62] [cursor=pointer]:
+    - img [ref=e63]
+  - alert [ref=e66]

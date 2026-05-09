@@ -1,0 +1,91 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - heading "Trip Shield — Claim Portal" [level=1] [ref=e5]:
+        - img [ref=e6]
+        - generic [ref=e9]: Trip Shield — Claim Portal
+      - paragraph [ref=e10]: Submit your claim online. Decisions within 7 working days.
+    - progressbar [ref=e11]
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]: Eligibility
+        - generic [ref=e16]: ›
+      - generic [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: Claim
+          - text: Details
+        - generic [ref=e20]: ›
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: Evidence
+          - text: Upload
+        - generic [ref=e24]: ›
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - generic [ref=e27]: Review
+          - generic [ref=e28]: "&"
+          - text: Submit
+        - generic [ref=e29]: ›
+      - generic [ref=e31]: Done
+    - generic [ref=e32]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: Step 1 — Eligibility
+          - generic [ref=e37]: Confirm you meet Trip Shield conditions before filing a claim.
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - img [ref=e40]
+            - generic [ref=e42]: Claim is filed before the flight's scheduled departure (no post‑departure claims)
+          - generic [ref=e43]:
+            - img [ref=e44]
+            - generic [ref=e46]: Departure is at least 48h from claim trigger
+          - generic [ref=e47]:
+            - img [ref=e48]
+            - generic [ref=e50]: Refund requested is for base fare + airline taxes only
+          - generic [ref=e51]:
+            - img [ref=e52]
+            - generic [ref=e54]: You have official evidence (doctor, police, employer, government, airline)
+          - generic [ref=e55]:
+            - img [ref=e56]
+            - generic [ref=e58]: You acknowledge Trip Shield is discretionary and fee is non‑refundable
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - checkbox "I confirm the above statements are true." [ref=e61] [cursor=pointer]
+            - generic [ref=e62]: I confirm the above statements are true.
+          - button "Continue" [disabled]
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - img [ref=e67]
+              - text: What Trip Shield Covers
+            - generic [ref=e70]: Emergencies with official documentation required
+          - generic [ref=e72]:
+            - generic [ref=e75]: Illness / Injury (including Covid)
+            - generic [ref=e78]: Pre-existing Medical Condition
+            - generic [ref=e81]: Pregnancy Complication
+            - generic [ref=e84]: Death
+            - generic [ref=e87]: Public Transport Failure
+            - generic [ref=e90]: Flight Disruption (Connecting Journey Only)
+            - generic [ref=e93]: Severe Weather
+            - generic [ref=e96]: Home Emergency
+            - generic [ref=e97] [cursor=pointer]: + 6 more circumstances
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - img [ref=e101]
+              - text: Not Covered
+            - generic [ref=e103]: Common exclusions to be aware of
+          - generic [ref=e105]:
+            - generic [ref=e108]: No-shows or failure to check in on time.
+            - generic [ref=e111]: Visa rejections without official documentation.
+            - generic [ref=e114]: Expired, invalid, or forgotten travel documents.
+            - generic [ref=e117]: Voluntary cancellations or personal preference changes.
+            - generic [ref=e120]: War, terrorism, strikes, riots, civil commotion, industrial action.
+            - generic [ref=e121] [cursor=pointer]: + 3 more exclusions
+        - generic [ref=e122]:
+          - generic [ref=e124]: Need Help?
+          - generic [ref=e126] [cursor=pointer]:
+            - img
+            - text: Read Full Terms & Conditions
+  - alert [ref=e127]

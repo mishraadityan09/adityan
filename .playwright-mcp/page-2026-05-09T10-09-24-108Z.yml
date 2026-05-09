@@ -1,0 +1,69 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - generic [ref=e10]:
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+        - generic [ref=e15]: Theme
+      - link "VI" [ref=e17] [cursor=pointer]:
+        - /url: /en
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - complementary [ref=e22]:
+        - navigation [ref=e23]:
+          - link "Introduction" [ref=e24] [cursor=pointer]:
+            - /url: /en
+          - link "Projects" [ref=e25] [cursor=pointer]:
+            - /url: /en/projects
+          - link "Skills & Tools" [ref=e26] [cursor=pointer]:
+            - /url: /en/skillstools
+          - link "Experience" [ref=e27] [cursor=pointer]:
+            - /url: /en/experience
+          - link "Contact" [ref=e28] [cursor=pointer]:
+            - /url: /en/contact
+      - main [ref=e29]:
+        - generic [ref=e32]:
+          - link "Back to Projects" [ref=e33] [cursor=pointer]:
+            - /url: /en/projects
+            - img [ref=e34]
+            - text: Back to Projects
+          - generic [ref=e37]:
+            - generic [ref=e38]:
+              - generic [ref=e39]:
+                - heading "Help Center Website" [level=1] [ref=e40]
+                - paragraph [ref=e41]: Jul 2025 - Present
+              - link "help.flightsmojo.in" [ref=e43] [cursor=pointer]:
+                - /url: https://help.flightsmojo.in/
+                - img [ref=e44]
+                - generic [ref=e49]: help.flightsmojo.in
+            - generic [ref=e50]:
+              - img "Help center home" [ref=e52]
+              - paragraph [ref=e53]: Help center home
+            - paragraph [ref=e54]: Developed a customer support and help center portal using Next.js with App Router. Implemented SEO optimization, dynamic routing, and responsive UI. Integrated with Zendesk for ticket management and built a custom chatbot to replace Zendesk AI for omnichannel support routing.
+            - generic [ref=e55]:
+              - paragraph [ref=e56]: Tech Stack
+              - generic [ref=e57]:
+                - generic [ref=e58]: Next.js
+                - generic [ref=e59]: App Router
+                - generic [ref=e60]: Zendesk
+                - generic [ref=e61]: SEO
+                - generic [ref=e62]: Custom Chatbot
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - heading "Screens" [level=2] [ref=e65]
+              - paragraph [ref=e66]:
+                - generic [ref=e67]: 1 screen
+            - figure "Knowledge base & self-service forms" [ref=e69]:
+              - img "Knowledge base & self-service forms" [ref=e71]
+              - generic [ref=e72]: Knowledge base & self-service forms
+    - contentinfo [ref=e73]:
+      - paragraph [ref=e74]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e75]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e81] [cursor=pointer]:
+    - img [ref=e82]
+  - alert [ref=e85]

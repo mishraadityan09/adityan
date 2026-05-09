@@ -1,0 +1,65 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - button "Toggle menu" [ref=e12]:
+      - text: Menu
+      - img [ref=e13]
+  - generic [ref=e14]:
+    - main [ref=e16]:
+      - generic [ref=e19]:
+        - link "Back to Projects" [ref=e20] [cursor=pointer]:
+          - /url: /en/projects
+          - img [ref=e21]
+          - text: Back to Projects
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - heading "NxFlow — Task & Project Management App" [level=1] [ref=e25]
+            - paragraph [ref=e26]: 2025 - Present
+          - generic [ref=e27]:
+            - img "Onboarding" [ref=e29]
+            - paragraph [ref=e30]: Onboarding
+          - paragraph [ref=e31]: Cross-platform task and project management app built in React Native (0.83, Hermes + new architecture) for iOS and Android. Implemented mobile + 6-digit MPIN authentication with secure Keychain storage and silent background token refresh, role-based access control across super-admin / project-admin / project-member roles, a 4-tab navigation (Tasks, Calendar, Projects, Profile) with lazy-loaded screens behind error boundaries and skeleton fallbacks, optimistic state updates, and a 30s in-memory cache backing the unified tasks + projects fetch. All sizing flows through a metrics scale (horizontalScale / verticalScale / moderateScale) for true responsive design across devices.
+          - generic [ref=e32]:
+            - paragraph [ref=e33]: Tech Stack
+            - generic [ref=e34]:
+              - generic [ref=e35]: React Native
+              - generic [ref=e36]: React Navigation
+              - generic [ref=e37]: Keychain
+              - generic [ref=e38]: TypeScript
+              - generic [ref=e39]: REST API
+              - generic [ref=e40]: Hermes
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - heading "Screens" [level=2] [ref=e43]
+            - paragraph [ref=e44]:
+              - generic [ref=e45]: 6 screens
+          - generic [ref=e46]:
+            - figure "Mobile + MPIN auth" [ref=e47]:
+              - img "Mobile + MPIN auth" [ref=e49]
+              - generic [ref=e50]: Mobile + MPIN auth
+            - figure "Tasks dashboard" [ref=e51]:
+              - img "Tasks dashboard" [ref=e53]
+              - generic [ref=e54]: Tasks dashboard
+            - figure "Month-view calendar" [ref=e55]:
+              - img "Month-view calendar" [ref=e57]
+              - generic [ref=e58]: Month-view calendar
+            - figure "Projects directory" [ref=e59]:
+              - img "Projects directory" [ref=e61]
+              - generic [ref=e62]: Projects directory
+            - figure "Profile & settings" [ref=e63]:
+              - img "Profile & settings" [ref=e65]
+              - generic [ref=e66]: Profile & settings
+            - figure "Admin user management" [ref=e67]:
+              - img "Admin user management" [ref=e69]
+              - generic [ref=e70]: Admin user management
+    - contentinfo [ref=e71]:
+      - paragraph [ref=e72]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e73]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e79] [cursor=pointer]:
+    - img [ref=e80]
+  - alert [ref=e83]

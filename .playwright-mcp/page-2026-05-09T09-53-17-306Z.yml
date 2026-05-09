@@ -1,0 +1,92 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - generic [ref=e10]:
+      - button "Toggle theme" [ref=e12]:
+        - img [ref=e13]
+        - generic [ref=e15]: Theme
+      - link "VI" [ref=e17] [cursor=pointer]:
+        - /url: /en
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - complementary [ref=e22]:
+        - navigation [ref=e23]:
+          - link "Introduction" [ref=e24] [cursor=pointer]:
+            - /url: /en
+          - link "Projects" [ref=e25] [cursor=pointer]:
+            - /url: /en/projects
+          - link "Skills & Tools" [ref=e26] [cursor=pointer]:
+            - /url: /en/skillstools
+          - link "Experience" [ref=e27] [cursor=pointer]:
+            - /url: /en/experience
+          - link "Contact" [ref=e28] [cursor=pointer]:
+            - /url: /en/contact
+      - main [ref=e29]:
+        - generic [ref=e32]:
+          - link "Back to Projects" [ref=e33] [cursor=pointer]:
+            - /url: /en/projects
+            - img [ref=e34]
+            - text: Back to Projects
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - generic [ref=e40]:
+                - heading "Flight Booking App (FlightsMojo)" [level=1] [ref=e41]
+                - paragraph [ref=e42]: Jul 2025 - Present
+              - generic [ref=e43]:
+                - link "Download on App Store" [ref=e44] [cursor=pointer]:
+                  - /url: https://apps.apple.com/in/app/flightsmojo-cheap-flights/id6757914588
+                  - img [ref=e45]
+                  - generic [ref=e47]:
+                    - generic [ref=e48]: Download on
+                    - generic [ref=e49]: App Store
+                - link "Get it on Google Play" [ref=e50] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.flightsmojo
+                  - img [ref=e51]
+                  - generic [ref=e53]:
+                    - generic [ref=e54]: Get it on
+                    - generic [ref=e55]: Google Play
+            - generic [ref=e56]:
+              - generic [ref=e58]: Loading 3D…
+              - paragraph [ref=e59]: Drag to rotate · scroll to zoom
+            - paragraph [ref=e60]: Built and shipped the end-to-end FlightsMojo flight booking app for both iOS and Android using Flutter. Implemented multi-GDS flight search (Travelport NDC, Kafila, TripJack), Razorpay payment integration, Firebase/FCM push notifications, GA4 analytics with logPurchase events, booking confirmation flows, and offline connectivity overlays. Managed full App Store and Play Store submission cycles including rejection resolution.
+            - generic [ref=e61]:
+              - paragraph [ref=e62]: Tech Stack
+              - generic [ref=e63]:
+                - generic [ref=e64]: Flutter
+                - generic [ref=e65]: iOS
+                - generic [ref=e66]: Android
+                - generic [ref=e67]: Firebase
+                - generic [ref=e68]: Razorpay
+                - generic [ref=e69]: GA4
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - heading "Screens" [level=2] [ref=e72]
+              - paragraph [ref=e73]:
+                - generic [ref=e74]: 5 screens
+            - generic [ref=e75]:
+              - figure "Brand splash" [ref=e76]:
+                - img "Brand splash" [ref=e78]
+                - generic [ref=e79]: Brand splash
+              - figure "Flash flight deals" [ref=e80]:
+                - img "Flash flight deals" [ref=e82]
+                - generic [ref=e83]: Flash flight deals
+              - figure "Multi-GDS search results" [ref=e84]:
+                - img "Multi-GDS search results" [ref=e86]
+                - generic [ref=e87]: Multi-GDS search results
+              - figure "Trip Shield protection" [ref=e88]:
+                - img "Trip Shield protection" [ref=e90]
+                - generic [ref=e91]: Trip Shield protection
+              - figure "Razorpay checkout" [ref=e92]:
+                - img "Razorpay checkout" [ref=e94]
+                - generic [ref=e95]: Razorpay checkout
+    - contentinfo [ref=e96]:
+      - paragraph [ref=e97]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e98]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e104] [cursor=pointer]:
+    - img [ref=e105]
+  - alert [ref=e108]

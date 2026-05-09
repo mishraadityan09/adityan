@@ -1,0 +1,75 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e3]:
+    - link "AM." [ref=e4] [cursor=pointer]:
+      - /url: /en
+      - paragraph [ref=e6]:
+        - generic [ref=e7]: A
+        - generic [ref=e8]: M
+        - generic [ref=e9]: .
+    - button "Toggle menu" [ref=e12]:
+      - text: Menu
+      - img [ref=e13]
+  - generic [ref=e14]:
+    - main [ref=e16]:
+      - generic [ref=e19]:
+        - link "Back to Projects" [ref=e20] [cursor=pointer]:
+          - /url: /en/projects
+          - img [ref=e21]
+          - text: Back to Projects
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - heading "Flight Booking App (FlightsMojo)" [level=1] [ref=e27]
+              - paragraph [ref=e28]: Jul 2025 - Present
+            - generic [ref=e29]:
+              - link "Download on App Store" [ref=e30] [cursor=pointer]:
+                - /url: https://apps.apple.com/in/app/flightsmojo-cheap-flights/id6757914588
+                - img [ref=e31]
+                - generic [ref=e33]:
+                  - generic [ref=e34]: Download on
+                  - generic [ref=e35]: App Store
+              - link "Get it on Google Play" [ref=e36] [cursor=pointer]:
+                - /url: https://play.google.com/store/apps/details?id=com.flightsmojo
+                - img [ref=e37]
+                - generic [ref=e39]:
+                  - generic [ref=e40]: Get it on
+                  - generic [ref=e41]: Google Play
+          - generic [ref=e42]:
+            - generic [ref=e44]: Loading 3D…
+            - paragraph [ref=e45]: Drag to rotate · scroll to zoom
+          - paragraph [ref=e46]: Built and shipped the end-to-end FlightsMojo flight booking app for both iOS and Android using Flutter. Implemented multi-GDS flight search (Travelport NDC, Kafila, TripJack), Razorpay payment integration, Firebase/FCM push notifications, GA4 analytics with logPurchase events, booking confirmation flows, and offline connectivity overlays. Managed full App Store and Play Store submission cycles including rejection resolution.
+          - generic [ref=e47]:
+            - paragraph [ref=e48]: Tech Stack
+            - generic [ref=e49]:
+              - generic [ref=e50]: Flutter
+              - generic [ref=e51]: iOS
+              - generic [ref=e52]: Android
+              - generic [ref=e53]: Firebase
+              - generic [ref=e54]: Razorpay
+              - generic [ref=e55]: GA4
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - heading "Screens" [level=2] [ref=e58]
+            - paragraph [ref=e59]: Swipe
+          - generic [ref=e60]:
+            - figure "Brand splash" [ref=e61]:
+              - img "Brand splash" [ref=e63]
+              - generic [ref=e64]: Brand splash
+            - figure "Flash flight deals" [ref=e65]:
+              - img "Flash flight deals" [ref=e67]
+              - generic [ref=e68]: Flash flight deals
+            - figure "Multi-GDS search results" [ref=e69]:
+              - img "Multi-GDS search results" [ref=e71]
+              - generic [ref=e72]: Multi-GDS search results
+            - figure "Trip Shield protection" [ref=e73]:
+              - img "Trip Shield protection" [ref=e75]
+              - generic [ref=e76]: Trip Shield protection
+            - figure "Razorpay checkout" [ref=e77]:
+              - img "Razorpay checkout" [ref=e79]
+              - generic [ref=e80]: Razorpay checkout
+    - contentinfo [ref=e81]:
+      - paragraph [ref=e82]: Copyright © 2025 Adityan Mishra
+      - paragraph [ref=e83]: Built with Next.js & Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e89] [cursor=pointer]:
+    - img [ref=e90]
+  - alert [ref=e93]
