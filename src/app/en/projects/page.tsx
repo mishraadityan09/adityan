@@ -42,6 +42,13 @@ const PROJECTS: Project[] = [
     previewImage: "/projects/tripshield/claim-portal.png",
   },
   {
+    title: "threeworld — Turn SVGs into Interactive 3D",
+    description:
+      "Open-source npm package + visual editor. The <SVG3D> React component embeds extruded 3D text/SVGs with PBR materials and animations; the editor lets anyone design 3D objects from text or SVG and export as PNG, video, or 3D model. Built on React Three Fiber. Forked from renatoworks/3dsvg and substantially upgraded.",
+    href: "/en/projects/threeworld",
+    previewImage: "/projects/threeworld/hero.png",
+  },
+  {
     title: "3D Interactive Showroom (Babylon.js)",
     description:
       "Immersive 3D showroom using Babylon.js with real-time material updates and first-person walk-through. Implemented GLB model optimization reducing sizes by 80% while preserving visual fidelity.",
