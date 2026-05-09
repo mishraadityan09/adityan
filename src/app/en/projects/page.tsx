@@ -44,7 +44,7 @@ const PROJECTS: Project[] = [
   {
     title: "threeworld — Turn SVGs into Interactive 3D",
     description:
-      "Open-source npm package + visual editor. The <SVG3D> React component embeds extruded 3D text/SVGs with PBR materials and animations; the editor lets anyone design 3D objects from text or SVG and export as PNG, video, or 3D model. Built on React Three Fiber. Forked from renatoworks/3dsvg and substantially upgraded.",
+      "Forked from renatoworks/3dsvg with substantial upgrades — 99%+ smaller 3D model exports (100MB+ → under 1MB), SVG color retention, a space-nebula background with dynamic point lights, redesigned editor UI, and a render-flicker fix. Turns any SVG, text, or pixel art into an interactive 3D object; exports PNG/video/GLB/STL/OBJ; ships an embeddable React component. Built with Three.js, React Three Fiber, and Next.js.",
     href: "/en/projects/threeworld",
     previewImage: "/projects/threeworld/hero.png",
   },

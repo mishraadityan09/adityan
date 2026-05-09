@@ -164,9 +164,9 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
   },
   "threeworld": {
     title: "threeworld — SVG → Interactive 3D",
-    time: "Apr 2025",
+    time: "Apr 2025 - Present",
     description:
-      "Forked from renatoworks/3dsvg and substantially upgraded. threeworld turns any SVG or text into a real-time 3D object — shipped as both an embeddable <SVG3D> React component (npm: 3dsvg) and a Next.js visual editor where designers pick from 10 PBR material presets, 7 animation modes, procedural textures, and configurable lighting, then export as PNG (up to 4K), 60fps video (MP4 via FFmpeg WASM, or WebM), or a GLB 3D model. The editor renders the engine directly, so what you see is exactly what you embed.",
+      "Forked from renatoworks/3dsvg with substantial upgrades I shipped: a 99%+ reduction in 3D model export size (100MB+ → under 1MB), SVG color retention so uploaded SVGs preserve their original colors in the 3D output, a fix for render flickering on model load, a space-nebula background with colored point lights that dynamically cast onto the model, a redesigned editor UI (cleaner top navigation, larger drawing canvas, better edit-panel UX), and improved default lighting for a better out-of-the-box experience. The editor turns any SVG, text, or pixel art into an interactive 3D object — export as PNG (up to 4K), video (MP4/WebM), or a 3D model (GLB/STL/OBJ). Also ships an embeddable React component: drop <SVG3D text=\"Hello\" animate=\"spin\" /> into any React app and get a fully interactive 3D object instantly. Built with Three.js, React Three Fiber, and Next.js.",
     stack: [
       "Next.js 16",
       "React Three Fiber",
