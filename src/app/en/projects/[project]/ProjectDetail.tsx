@@ -162,6 +162,33 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
     description: "Designed and developed an immersive 3D showroom experience using Babylon.js, enabling users to view and customize product models with real-time material updates. Implemented a first-person walk-through feature for intuitive spatial exploration and product assessment.",
     stack: ["Babylon.js", "3D Rendering", "GLB Optimization"],
   },
+  "threeworld": {
+    title: "threeworld — SVG → Interactive 3D",
+    time: "Apr 2025",
+    description:
+      "Forked from renatoworks/3dsvg and substantially upgraded. threeworld turns any SVG or text into a real-time 3D object — shipped as both an embeddable <SVG3D> React component (npm: 3dsvg) and a Next.js visual editor where designers pick from 10 PBR material presets, 7 animation modes, procedural textures, and configurable lighting, then export as PNG (up to 4K), 60fps video (MP4 via FFmpeg WASM, or WebM), or a GLB 3D model. The editor renders the engine directly, so what you see is exactly what you embed.",
+    stack: [
+      "Next.js 16",
+      "React Three Fiber",
+      "Three.js",
+      "TypeScript",
+      "tsup",
+      "opentype.js",
+      "FFmpeg WASM",
+      "Tailwind v4",
+      "shadcn/ui",
+    ],
+    links: [
+      { label: "Try it live", href: "https://threeworld-web-j7a8.vercel.app/", platform: "web" },
+      { label: "GitHub", href: "https://github.com/mishraadityan09/threeworld", platform: "external" },
+    ],
+    images: [
+      { src: "/projects/threeworld/editor.png",    caption: "Visual editor — material + animation controls", frame: "browser" },
+      { src: "/projects/threeworld/materials.png", caption: "10 PBR material presets",                       frame: "browser" },
+      { src: "/projects/threeworld/export.png",    caption: "PNG export up to 4K, 60fps video export",       frame: "browser" },
+      { src: "/projects/threeworld/embed.png",     caption: "Embed code generation — copy <SVG3D> JSX",      frame: "browser" },
+    ],
+  },
   "wifi-service": {
     title: "WiFi Service Application",
     time: "Jan 2025 - Jun 2025",
