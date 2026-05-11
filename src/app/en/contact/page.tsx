@@ -3,7 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
+import {
+  initialContactFormState,
+  sendContactMessage,
+} from "@/lib/actions/contact";
 
 export default function ContactPage() {
   return (
@@ -86,6 +90,18 @@ function ContactInfoItem({
 function ContactForm() {
   const [content, setContent] = useState("");
   const MAX = 1000;
+  const formRef = useRef<HTMLFormElement>(null);
+  const [state, formAction, pending] = useActionState(
+    sendContactMessage,
+    initialContactFormState
+  );
+
+  useEffect(() => {
+    if (state.status === "ok") {
+      formRef.current?.reset();
+      setContent("");
+    }
+  }, [state]);
 
   return (
     <div className="flex flex-col gap-6 rounded-xl border border-border bg-card py-6 text-card-foreground shadow-sm w-full max-w-sm">
@@ -102,11 +118,17 @@ function ContactForm() {
 
       {/* Card content */}
       <div className="px-6">
-        <form id="contact-form" className="flex flex-col gap-5">
+        <form
+          ref={formRef}
+          id="contact-form"
+          action={formAction}
+          className="flex flex-col gap-5"
+        >
           <Field label="Email">
             <input
               type="email"
               name="email"
+              required
               placeholder="your-email@gmail.com"
               className="h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-[color,box-shadow]"
             />
@@ -115,6 +137,7 @@ function ContactForm() {
             <input
               type="text"
               name="topic"
+              required
               placeholder="What's the topic today?"
               className="h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-[color,box-shadow]"
             />
@@ -123,6 +146,7 @@ function ContactForm() {
             <div className="relative">
               <textarea
                 name="content"
+                required
                 placeholder="Type your message here."
                 rows={5}
                 maxLength={MAX}
@@ -137,10 +161,24 @@ function ContactForm() {
           </Field>
           <button
             type="submit"
-            className="w-full rounded-md bg-primary text-primary-foreground py-2 text-sm font-medium hover:opacity-90 transition-opacity"
+            disabled={pending}
+            className="w-full rounded-md bg-primary text-primary-foreground py-2 text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Send
+            {pending ? "Sending…" : "Send"}
           </button>
+          {state.status !== "idle" && (
+            <p
+              role="status"
+              aria-live="polite"
+              className={`text-sm ${
+                state.status === "ok"
+                  ? "text-green-600 dark:text-green-400"
+                  : "text-red-600 dark:text-red-400"
+              }`}
+            >
+              {state.message}
+            </p>
+          )}
         </form>
       </div>
     </div>
