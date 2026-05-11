@@ -1,16 +1,7 @@
 "use server";
 
 import { Resend } from "resend";
-
-export type ContactFormState = {
-  status: "idle" | "ok" | "error";
-  message: string;
-};
-
-export const initialContactFormState: ContactFormState = {
-  status: "idle",
-  message: "",
-};
+import type { ContactFormState } from "./contact-types";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const TO_ADDRESS = "adityanmishra36@gmail.com";

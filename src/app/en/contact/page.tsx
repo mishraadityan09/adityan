@@ -4,10 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useActionState, useEffect, useRef, useState } from "react";
-import {
-  initialContactFormState,
-  sendContactMessage,
-} from "@/lib/actions/contact";
+import { sendContactMessage } from "@/lib/actions/contact";
+import { initialContactFormState } from "@/lib/actions/contact-types";
 
 export default function ContactPage() {
   return (
