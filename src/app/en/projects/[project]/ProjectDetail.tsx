@@ -55,7 +55,7 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
   "flightsmojo": {
     title: "Flight Booking App (FlightsMojo)",
     time: "Jul 2025 - Present",
-    description: "Built and shipped the end-to-end FlightsMojo flight booking app for both iOS and Android using Flutter. Implemented multi-GDS flight search (Travelport NDC, Kafila, TripJack), Razorpay payment integration, Firebase/FCM push notifications, GA4 analytics with logPurchase events, booking confirmation flows, and offline connectivity overlays. Managed full App Store and Play Store submission cycles including rejection resolution.",
+    description: "Built and shipped the end-to-end FlightsMojo flight booking app for both iOS and Android using Flutter. The app has ~50K downloads on Android and ~12K on iOS and books tickets every day, with the app alone contributing ₹6–7 lakh in revenue per day. Implemented multi-GDS flight search (Travelport NDC, Kafila, TripJack), Razorpay payment integration, Firebase/FCM push notifications, GA4 analytics with logPurchase events, booking confirmation flows, and offline connectivity overlays. Managed full App Store and Play Store submission cycles including rejection resolution.",
     stack: ["Flutter", "iOS", "Android", "Firebase", "Razorpay", "GA4"],
     glbSrc: "/models/flightsmojo.glb",
     links: [
@@ -108,8 +108,8 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
   "help-center": {
     title: "Help Center Website",
     time: "Jul 2025 - Present",
-    description: "Developed a customer support and help center portal using Next.js with App Router. Implemented SEO optimization, dynamic routing, and responsive UI. Integrated with Zendesk for ticket management and built a custom chatbot to replace Zendesk AI for omnichannel support routing.",
-    stack: ["Next.js", "App Router", "Zendesk", "SEO", "Custom Chatbot"],
+    description: "Developed a customer support and help center portal using Next.js with App Router. Implemented SEO optimization, dynamic routing, and responsive UI across 8 country domains. Moved it off Zendesk onto our self-hosted Chatwoot: Help Centre articles load from the Chatwoot portal API (rendered from Markdown, with 301 redirects for old Zendesk article URLs), support tickets and booking inquiries are created through the Chatwoot API, and live chat runs on the Chatwoot web widget.",
+    stack: ["Next.js", "App Router", "Chatwoot API", "SEO", "Multi-domain"],
     links: [
       {
         label: "help.flightsmojo.in",
@@ -124,19 +124,36 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
   },
   "flightsmojo-web": {
     title: "FlightsMojo Web Booking",
-    time: "2025 - In development",
-    description: "Building the FlightsMojo flight booking web platform in Next.js — the desktop counterpart to the Flutter mobile app. Currently in active UAT development. Implements responsive flight search across multiple GDS sources, fare comparison, currency localisation, Trip-Shield protection upsell, AI-powered fare alerts, and 24×7 customer support flows. Same brand system and search experience as the mobile app, designed mobile-first and scaling up to wide desktop layouts.",
+    time: "2025 - Present",
+    description: "Built and shipped the FlightsMojo flight booking web platform in Next.js — now live in production and the company's main source of revenue. Implements responsive flight search across multiple GDS sources, fare comparison, currency localisation, Trip-Shield protection upsell, and 24×7 customer support flows. Same brand system and search experience as the mobile app, designed mobile-first and scaling up to wide desktop layouts.",
     stack: ["Next.js", "App Router", "TypeScript", "Multi-GDS", "i18n", "Responsive"],
     links: [
       {
-        label: "uat.flightsmojo.in",
-        href: "https://uat.flightsmojo.in/",
+        label: "flightsmojo.in",
+        href: "https://flightsmojo.in/",
         platform: "web",
       },
     ],
     images: [
       { src: "/projects/flightsmojo-web/search.png", caption: "Flight search", frame: "browser" },
       { src: "/projects/flightsmojo-web/deals.png", caption: "Offers & flash deals", frame: "browser" },
+    ],
+  },
+  "support-platform": {
+    title: "Self-Hosted Support Platform (Chatwoot fork)",
+    time: "Jul 2026 - Present",
+    description:
+      "Replaced Zendesk with a self-hosted, FlightsMojo-branded fork of Chatwoot running on our own server. It brings WhatsApp, email, the website chat widget, and API channels (web ticket forms and TripShield claims) into one omnichannel inbox across 5 markets (IN, AE, US, UK, ID), with team routing and labels. It handles 10,000–15,000 support tickets a month and cut support costs from $850/month on Zendesk to about $100/month in server and API costs, an ~88% saving. Built an AI chatbot (Gemini, then OpenAI, with function calling) on WhatsApp and web chat that looks up booking status, answers from Help Centre articles migrated from Zendesk, persists the booking ID on the conversation, auto-resolves quiet chats, and hands off to human agents. On the agent side, the fork adds a Zendesk-style ticket table, in-app ticket tabs with Play / Next queue navigation, sticky assignment that routes returning customers to their last agent, live open-ticket and folder counts in the sidebar, and a booking-ID chip on every conversation. Also set up per-country inbound email through a Postfix relay with Netcore sending, and a CI pipeline that builds tagged, versioned images for each release.",
+    stack: [
+      "Chatwoot",
+      "Ruby on Rails",
+      "Vue.js",
+      "Node.js",
+      "PostgreSQL",
+      "Redis",
+      "Docker Compose",
+      "GitHub Actions",
+      "Gemini / OpenAI",
     ],
   },
   "tripshield": {
@@ -187,6 +204,56 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
       { src: "/projects/threeworld/materials.png", caption: "10 PBR material presets",                       frame: "browser" },
       { src: "/projects/threeworld/export.png",    caption: "PNG export up to 4K, 60fps video export",       frame: "browser" },
       { src: "/projects/threeworld/embed.png",     caption: "Embed code generation — copy <SVG3D> JSX",      frame: "browser" },
+    ],
+  },
+  "cloak": {
+    title: "Cloak — Private Remote for Claude Code",
+    time: "Jun 2026 - Present",
+    description:
+      "Designed and shipped Cloak, a private, self-hosted remote for coding agents — drive Claude Code, Codex, or Cursor running on your own computer from your phone, with nothing passing through a vendor cloud. Two halves: the cloak-remote npm CLI (run npx cloak-remote on the host) and an Expo / React Native app, live on Google Play. The host drives Claude through the Agent SDK for chat and node-pty for a full terminal mirror, then exposes an encrypted WebSocket over a free outbound-only Cloudflare tunnel (with a LAN fallback). Pairing is a QR scan: ECDH P-256 key exchange (no secret ever transmitted) → per-message AES-256-GCM with per-session forward secrecy → PIN second factor → biometric unlock, with the shared crypto running identically in Node and React Native via @noble. In the app: a chat view where every edit and command is gated behind an inline diff (approve / deny), a terminal tab with esc / ^C / ctrl keys and a snippets sheet, per-session agent and folder pickers, multiple live sessions that survive disconnects and sleep, reconnect handling, push notifications when a session needs you, and customizable themes. Works on macOS, Linux, and Windows.",
+    stack: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Node.js CLI",
+      "Claude Agent SDK",
+      "node-pty",
+      "WebSocket",
+      "Cloudflare Tunnel",
+      "E2E Crypto (@noble)",
+    ],
+    links: [
+      {
+        label: "Google Play",
+        href: "https://play.google.com/store/apps/details?id=com.cloakapp.app",
+        platform: "android",
+      },
+      { label: "npm — cloak-remote", href: "https://www.npmjs.com/package/cloak-remote", platform: "external" },
+      { label: "cloak-intro.vercel.app", href: "https://cloak-intro.vercel.app/", platform: "web" },
+    ],
+    images: [
+      { src: "/projects/cloak/pairing.png", caption: "Pair with npx cloak-remote" },
+      { src: "/projects/cloak/pin.png", caption: "PIN second factor" },
+      { src: "/projects/cloak/folder-picker.png", caption: "Pick a folder per session" },
+      { src: "/projects/cloak/chat.png", caption: "Chat with Claude Code" },
+      { src: "/projects/cloak/terminal.png", caption: "Full terminal mirror" },
+      { src: "/projects/cloak/snippets.png", caption: "Command snippets" },
+    ],
+  },
+  "cloak-intro": {
+    title: "Cloak Landing Site",
+    time: "Jun 2026 - Present",
+    description:
+      "Built the marketing site for Cloak in Next.js 16 (App Router) with React 19 and Tailwind v4. It has an Apple-style scroll experience built with GSAP: ScrollSmoother inertia scrolling, a pinned \"watch it work\" product scrub, a horizontal-scroll feature gallery, SplitText masked reveals, and subtle parallax, all with prefers-reduced-motion and no-JS fallbacks. It also includes an animated phone mockup of the app, a folder-driven demo section (one phone per clip), a contact form that sends email through Resend via a Server Action, generated Open Graph / Twitter images, a privacy policy page for the Play Store listing, a mobile hamburger nav, and Vercel Analytics.",
+    stack: ["Next.js 16", "React 19", "Tailwind v4", "GSAP", "ScrollTrigger", "Resend", "Vercel"],
+    links: [
+      { label: "cloak-intro.vercel.app", href: "https://cloak-intro.vercel.app/", platform: "web" },
+      { label: "GitHub", href: "https://github.com/mishraadityan09/cloak-intro", platform: "external" },
+    ],
+    images: [
+      { src: "/projects/cloak-intro/hero.png", caption: "Hero with live phone mockup", frame: "browser" },
+      { src: "/projects/cloak-intro/features.png", caption: "Horizontal-scroll feature gallery", frame: "browser" },
+      { src: "/projects/cloak-intro/security.png", caption: "Security section", frame: "browser" },
     ],
   },
   "wifi-service": {

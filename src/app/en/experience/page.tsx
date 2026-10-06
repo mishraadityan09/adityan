@@ -11,11 +11,11 @@ const EXPERIENCE: ExperienceItem[] = [
     period: "Jul 2025 – Present",
     location: "Remote",
     points: [
-      "Built and shipped the end-to-end FlightsMojo flight booking app for iOS & Android using Flutter — multi-GDS search (Travelport NDC, Kafila, TripJack), Razorpay payments, Firebase/FCM push notifications, GA4 analytics, and full App Store / Play Store release cycles.",
-      "Developed help.flightsmojo.in in Next.js with App Router — SEO optimization, dynamic routing, Zendesk integration, and a custom chatbot for omnichannel support routing.",
-      "Built tripshield.flightsmojo.in in Next.js — travel protection landing site and responsive HTML email templates for booking confirmations and policy communications.",
-      "Developed internal Zendesk trigger documentation, omnichannel routing configs, and OpenClaw-based automation for airline web check-in workflows.",
-    ],
+      "Built and shipped the end-to-end FlightsMojo flight booking app for iOS & Android using Flutter — ~50K Android and ~12K iOS downloads, with the app alone contributing ₹6–7 lakh in revenue per day. Multi-GDS search (Travelport NDC, Kafila, TripJack), Razorpay payments, Firebase/FCM push notifications, GA4 analytics, and full App Store / Play Store release cycles.",
+      "Built and shipped flightsmojo.in in Next.js — the flight booking web platform and the company's main source of revenue, with multi-GDS search, fare comparison, currency localisation, Trip-Shield upsell, and 24×7 support flows.",
+      "Replaced Zendesk with a self-hosted Chatwoot fork — one omnichannel inbox for WhatsApp, email, website chat widget, and API channels across 5 markets, handling 10,000–15,000 tickets a month and cutting support costs from $850/month to about $100/month. Built an AI chatbot on WhatsApp and web chat (booking-status lookup, Help Centre answers, human handoff), plus a Zendesk-style ticket table, sticky assignment, and per-country inbound email.",
+      "Developed help.flightsmojo.in in Next.js with App Router across 8 country domains — SEO optimization and dynamic routing, now running on our self-hosted Chatwoot (portal API for articles, Chatwoot API for tickets, and the Chatwoot chat widget).",
+      "Built tripshield.flightsmojo.in in Next.js — travel protection landing site and responsive HTML email templates for booking confirmations and policy communications.",    ],
   },
   {
     company: "Freelance Frontend Developer",

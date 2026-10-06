@@ -9,9 +9,23 @@ const PROJECTS: Project[] = [
   {
     title: "FlightsMojo — Flight Booking App (Flutter)",
     description:
-      "End-to-end flight booking app for iOS & Android. Multi-GDS search (Travelport NDC, Kafila, TripJack), Razorpay payments, Firebase/FCM push notifications, GA4 analytics, and full App Store / Play Store release cycles.",
+      "End-to-end flight booking app for iOS & Android — ~50K Android and ~12K iOS downloads, booking tickets every day with the app alone contributing ₹6–7 lakh in daily revenue. Multi-GDS search (Travelport NDC, Kafila, TripJack), Razorpay payments, Firebase/FCM push notifications, GA4 analytics, and full App Store / Play Store release cycles.",
     href: "/en/projects/flightsmojo",
     previewImage: "/projects/flightsmojo/branding.png",
+  },
+  {
+    title: "Cloak — Private Remote for Claude Code (React Native + Node CLI)",
+    description:
+      "Drive Claude Code, Codex, or Cursor on your computer from your phone. Expo / React Native app (live on Google Play) with a chat view that gates every edit behind a diff, plus a full terminal mirror. Paired with the cloak-remote npm CLI over a QR-paired, end-to-end-encrypted (ECDH P-256 + AES-256-GCM) Cloudflare tunnel. No account, no cloud.",
+    href: "/en/projects/cloak",
+    previewImage: "/projects/cloak/pairing.png",
+  },
+  {
+    title: "Cloak Landing Site — cloak-intro.vercel.app",
+    description:
+      "Marketing site for Cloak built with Next.js 16 + Tailwind v4 and an Apple-style GSAP scroll experience — ScrollSmoother inertia, a pinned product scrub, horizontal-scroll feature gallery, and SplitText reveals with reduced-motion fallbacks. Resend contact form, generated OG images, and a Play Store privacy policy.",
+    href: "/en/projects/cloak-intro",
+    previewImage: "/projects/cloak-intro/hero.png",
   },
   {
     title: "NxFlow — Task & Project Management App (React Native)",
@@ -23,16 +37,22 @@ const PROJECTS: Project[] = [
   {
     title: "Help Center Website — help.flightsmojo.in",
     description:
-      "Customer support portal built with Next.js App Router. SEO optimization, dynamic routing, Zendesk integration, and a custom chatbot for omnichannel support routing.",
+      "Customer support portal built with Next.js App Router across 8 country domains. SEO optimization and dynamic routing, running on our self-hosted Chatwoot — articles from the Chatwoot portal API, tickets created through the Chatwoot API, and the Chatwoot chat widget.",
     href: "/en/projects/help-center",
     previewImage: "/projects/help-center/home.png",
   },
   {
-    title: "FlightsMojo Web Booking — flightsmojo.in (in development)",
+    title: "FlightsMojo Web Booking — flightsmojo.in",
     description:
-      "Desktop counterpart to the FlightsMojo mobile app. Next.js flight booking web platform with multi-GDS search, fare comparison, currency localisation, Trip-Shield upsell, AI-powered fare alerts. Currently in active UAT development.",
+      "FlightsMojo's main source of revenue. Next.js flight booking web platform with multi-GDS search, fare comparison, currency localisation, and Trip-Shield upsell. Live in production.",
     href: "/en/projects/flightsmojo-web",
     previewImage: "/projects/flightsmojo-web/search.png",
+  },
+  {
+    title: "Self-Hosted Support Platform — Chatwoot fork (replacing Zendesk)",
+    description:
+      "Replaced Zendesk with a self-hosted, FlightsMojo-branded Chatwoot fork — one omnichannel inbox for WhatsApp, email, website chat widget, and API channels across 5 markets. Handles 10,000–15,000 support tickets a month and cut support costs from $850/month to about $100/month (~88% saving). AI chatbot on WhatsApp and web chat with booking-status lookup and human handoff, Zendesk-style ticket table, and sticky assignment.",
+    href: "/en/projects/support-platform",
   },
   {
     title: "TripShield Claim Portal — tripshield.flightsmojo.in",
