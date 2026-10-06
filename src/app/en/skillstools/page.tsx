@@ -47,6 +47,14 @@ const SKILLS: SkillGroup[] = [
       { name: "VS Code" },
     ],
   },
+  {
+    category: "AI & Developer Tools",
+    items: [
+      { name: "Claude Code CLI" },
+      { name: "MCP Servers" },
+      { name: "Figma MCP", iconSrc: "/icons-design/figma.svg" },
+    ],
+  },
 ];
 
 export default function SkillsPage() {
