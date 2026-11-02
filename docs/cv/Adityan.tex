@@ -1,0 +1,174 @@
+% Adityan Mishra — CV source.
+% Build (tectonic is installed via Homebrew):
+%   tectonic docs/cv/Adityan.tex && mv docs/cv/Adityan.pdf public/cv/Adityan.pdf
+% Template: sb2nov resume (https://github.com/sb2nov/resume), compiled with XeTeX via tectonic.
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{fontspec}
+\usepackage{latexsym}
+\usepackage{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2}\par\vspace{-2pt}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Adityan Mishra} & Email : \href{mailto:adityanmishra36@gmail.com}{adityanmishra36@gmail.com}\\
+  Linkedin: \href{https://www.linkedin.com/in/adityan-mishra-61ba18162/}{https://www.linkedin.com/in/adityan-mishra-61ba18162/} & Mobile : 9935822084 \\
+  Portfolio: \href{https://adityan-phi.vercel.app/}{https://adityan-phi.vercel.app} & \\
+\end{tabular*}
+
+%-----------SKILLS SUMMARY-----------------
+\section{Skills Summary}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}{Python, JavaScript, HTML, CSS, Dart}
+    \resumeSubItem{Frameworks \& Libraries}{React, React Native, Next.js, Three.js, Babylon.js, Flutter}
+    \resumeSubItem{UI Libraries}{Tailwind CSS, Material UI (MUI)}
+    \resumeSubItem{Tools}{Git, npm/yarn, Chrome DevTools, VS Code, Firebase, Razorpay}
+    \resumeSubItem{AI \& Developer Tools}{Claude Code CLI, MCP servers, Figma MCP}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading{FlightsMojo}{Remote}
+      {Frontend Developer (Flutter \& Next.js)}{Jul 2025 - Present}
+      \resumeItemListStart
+        \resumeItem{Flight Booking App (Flutter --- iOS \& Android) (\href{https://apps.apple.com/in/app/flightsmojo-cheap-flights/id6757914588}{App Store} | \href{https://play.google.com/store/apps/details?id=com.flightsmojo}{Google Play})}
+          {Built and shipped the end-to-end FlightsMojo flight booking app for both iOS and Android using Flutter; it has $\sim$50K downloads on Android and $\sim$12K on iOS and books tickets every day, with the app alone contributing INR 6--7 lakh in revenue per day. Implemented multi-GDS flight search (Travelport NDC, Kafila, TripJack), Razorpay payment integration, Firebase/FCM push notifications, GA4 analytics with logPurchase events, booking confirmation flows, and offline connectivity overlays. Managed full App Store and Play Store submission cycles including rejection resolution.}
+        \resumeItem{FlightsMojo Web Booking (\href{https://flightsmojo.in/}{flightsmojo.in})}
+          {Built and shipped the FlightsMojo flight booking web platform in Next.js, now live in production and the company's main source of revenue. Implemented responsive multi-GDS flight search, fare comparison, currency localisation, Trip-Shield protection upsell, and 24$\times$7 customer support flows, sharing the mobile app's brand system and scaling from mobile-first up to wide desktop layouts.}
+        \resumeItem{Self-Hosted Support Platform (Chatwoot fork, replacing Zendesk \& Emailgistics)}
+          {Replaced Zendesk with a self-hosted, FlightsMojo-branded Chatwoot fork (Rails + Vue, Docker Compose, CI-built images) running on our own server, bringing WhatsApp, email, website chat widget, and API channels (web ticket forms, TripShield claims) into one omnichannel inbox across 5 markets (IN, AE, US, UK, ID). It handles $\sim$7,000 conversations and 22,000+ inbound messages per week (43,000+ conversations so far) and saves about \$900/month net of server and OpenAI API costs by replacing both Zendesk and Emailgistics. Built the email workflows that replaced Emailgistics for shared mailboxes (auto-labelling, priorities, team routing) and an AI chatbot (Gemini, then OpenAI, with function calling) on WhatsApp and web chat that looks up booking status, answers from Help Centre articles migrated from Zendesk, auto-resolves quiet chats, and hands off to human agents. Added a Zendesk-style ticket table, sticky assignment for returning customers, live open-ticket counts, and per-country inbound email.}
+        \resumeItem{Help Center Website (\href{https://help.flightsmojo.in/}{help.flightsmojo.in})}
+          {Developed a customer support and help center portal using Next.js with App Router. Implemented SEO optimization, dynamic routing, and responsive UI across 8 country domains. Moved it off Zendesk onto our self-hosted Chatwoot: Help Centre articles load from the Chatwoot portal API (with 301 redirects for old Zendesk article URLs), support tickets and booking inquiries are created through the Chatwoot API, and live chat runs on the Chatwoot web widget.}
+        \resumeItem{TripShield Website (\href{https://tripshield.flightsmojo.in/}{tripshield.flightsmojo.in})}
+          {Built the TripShield travel protection product landing and onboarding site in Next.js. Designed responsive email templates (HTML table-based) for booking confirmations, schedule change notifications, and Trip Shield policy communications.}
+      \resumeItemListEnd
+
+    \resumeSubheading{Freelance Frontend Developer}{Remote}
+      {Independent Contractor}{Jan 2025 - Jun 2025}
+      \resumeItemListStart
+        \resumeItem{WiFi Service Application}
+          {Building a Next.js app for a WiFi service provider with user and admin dashboards. Features include lead generation, customer onboarding, subscription management, and ticket support. Designed responsive UI with Tailwind CSS, MUI, and integrated RESTful APIs.}
+      \resumeItemListEnd
+
+    \resumeSubheading{Innodesign}{Rajkot, India}
+      {Frontend Developer}{Nov 2023 - Nov 2024}
+      \resumeItemListStart
+        \resumeItem{3D Interactive Showroom}
+          {Designed and developed an immersive 3D showroom experience using Babylon.js, enabling users to view and customize product models with real-time material updates. Implemented a first-person walk-through feature for intuitive spatial exploration and product assessment.}
+        \resumeItem{3D Performance Optimization}
+          {Implemented advanced GLB model processing techniques, reducing model sizes by 80\% while preserving visual fidelity, resulting in significantly improved loading times and browser rendering performance.}
+        \resumeItem{Model Validation Tool}
+          {Created a web-based model viewer utility allowing users to upload, preview, and verify 3D model quality, including detailed analysis of mesh structure, naming conventions, and size optimization opportunities.}
+      \resumeItemListEnd
+
+    \resumeSubheading{Cloudastra}{Noida, India}
+      {Software Developer}{Apr 2023 - Oct 2023}
+      \resumeItemListStart
+        \resumeItem{Corporate Website Development}
+          {Designed and developed the company's primary website (Cloudastra.co) showcasing projects, services, and facilitating client engagement using modern frontend technologies.}
+        \resumeItem{Healthcare Mobile Application}
+          {Built a cross-platform healthcare application using React Native for doctors to manage appointments, track patient status, and maintain electronic health records. Simultaneously developed a web version using Next.js for comprehensive platform coverage.}
+        \resumeItem{Healthcare Camp Management System}
+          {Developed a location-based Flutter application for healthcare appointment management, integrating Google Maps API for nearby camp discovery, booking, and appointment management functionality.}
+        \resumeItem{Health Policy Advisory Platform}
+          {Built a Flutter web app to guide users in selecting suitable health policies and healthcare facilities. Enabled coverage verification and smart policy recommendations.}
+      \resumeItemListEnd
+
+    \resumeSubheading{Siloho}{Goa, India}
+      {Frontend Developer}{Aug 2022 - Apr 2023}
+      \resumeItemListStart
+        \resumeItem{Interior Design Data Collection App}
+          {Developed a React Native camera application enabling employees to efficiently collect and share data during the interior design assessment process.}
+        \resumeItem{E-commerce Platform for Interior Design}
+          {Built a customizable e-commerce platform for home and interior design products with interactive visualization capabilities for previewing designs within the customer's space.}
+        \resumeItem{Internal Tools and 3D UI Development}
+          {Engineered internal tools using JavaScript/jQuery for workflow optimization and built a sophisticated UI for 3D rendering using JSTree and jQuery data tables, enabling seamless data communication and intuitive visualization.}
+      \resumeItemListEnd
+
+    \resumeSubheading{Orryworx}{Gurgaon, India}
+      {Associate Developer}{Jan 2022 - Jul 2022}
+      \resumeItemListStart
+        \resumeItem{Life Management Platform}
+          {Collaborated on developing a comprehensive platform for guardians and conservators to manage legal compliance, financial affairs, and medical information. Implemented new features and resolved production issues to enhance platform stability and user experience.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading{JSS Academy of Technical Education}{Noida, India}
+      {Bachelor of Computer Science}{Aug 2017 - Aug 2021}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Personal Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Cloak --- Private Remote for Claude Code (React Native, Node.js)}
+      {Built and shipped a self-hosted remote for coding agents that lets you drive Claude Code, Codex, or Cursor running on your own computer from your phone. Live on \href{https://play.google.com/store/apps/details?id=com.cloakapp.app}{Google Play} with a companion \href{https://www.npmjs.com/package/cloak-remote}{cloak-remote} npm CLI. QR-based pairing with end-to-end encryption (ECDH P-256 key exchange, per-message AES-256-GCM, PIN and biometric unlock) over an outbound-only Cloudflare tunnel. A chat view gates every edit and command behind an inline diff, alongside a full terminal mirror (node-pty) and multiple sessions that survive disconnects. Also built the Next.js + GSAP landing site (\href{https://cloak-intro.vercel.app/}{\textbf{cloak-intro.vercel.app}}).}
+    \resumeSubItem{threeworld --- SVG to Interactive 3D (Three.js, React Three Fiber, Next.js)}
+      {Forked renatoworks/3dsvg and shipped major upgrades: cut 3D model export size by 99\%+ (100MB+ to under 1MB), preserved original SVG colors in the 3D output, fixed render flicker on model load, added a space-nebula scene with dynamic point lights, and redesigned the editor UI. Turns any SVG, text, or pixel art into an interactive 3D object with PNG (up to 4K), video, and GLB/STL/OBJ export, plus an embeddable React component. \href{https://threeworld-web-j7a8.vercel.app/}{Live demo} | \href{https://github.com/mishraadityan09/threeworld}{GitHub}.}
+  \resumeSubHeadingListEnd
+
+\end{document}

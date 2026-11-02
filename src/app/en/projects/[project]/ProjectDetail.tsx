@@ -167,6 +167,11 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
         caption: "Omnichannel inbox — WhatsApp, email, chat and web tickets with labels, teams and priorities",
         frame: "browser",
       },
+      {
+        src: "/projects/support-platform/admin-dashboard.png",
+        caption: "Super-admin dashboard — 16 inboxes, 33 agents, 22.5K conversations in the last 30 days (726 a day)",
+        frame: "browser",
+      },
     ],
   },
   "tripshield": {
