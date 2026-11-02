@@ -1,7 +1,13 @@
 import type { ExperienceItem } from "@/types";
 import { MobilePager } from "@/components/layout/MobilePager";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata = { title: "Experience | Adityan Mishra" };
+export const metadata = pageMetadata({
+  title: "Experience",
+  description:
+    "4+ years across startups and agencies — FlightsMojo, Innodesign, Cloudastra, Siloho and Orryworx — building web, mobile and 3D products.",
+  path: "/en/experience",
+});
 
 const EXPERIENCE: ExperienceItem[] = [
   {

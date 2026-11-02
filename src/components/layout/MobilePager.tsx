@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { NAV_ITEMS } from "./Sidebar";
+import { NAV_ITEMS } from "@/lib/site";
 
 /**
  * Prev / next section links shown below the content on phones and tablets, where the

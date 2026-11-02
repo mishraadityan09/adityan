@@ -4,14 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-
-export const NAV_ITEMS = [
-  { label: "Introduction", href: "/en" },
-  { label: "Projects", href: "/en/projects" },
-  { label: "Skills & Tools", href: "/en/skillstools" },
-  { label: "Experience", href: "/en/experience" },
-  { label: "Contact", href: "/en/contact" },
-];
+import { NAV_ITEMS } from "@/lib/site";
 
 export function Sidebar() {
   const pathname = usePathname();

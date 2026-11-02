@@ -4,14 +4,36 @@ import { ArrowUpRight } from "lucide-react";
 import PixelTransition from "@/components/PixelTransition";
 import { MobilePager } from "@/components/layout/MobilePager";
 import { cn } from "@/lib/utils";
+import { pageMetadata, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL, SOCIAL } from "@/lib/site";
 
-export const metadata = {
-  title: "Adityan Mishra — Frontend Developer",
+export const metadata = pageMetadata({
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  path: "/en",
+  absoluteTitle: true,
+});
+
+// Structured data so search engines can show a Person knowledge panel for the site.
+const PERSON_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE_NAME,
+  jobTitle: "Frontend Developer",
+  url: SITE_URL,
+  image: `${SITE_URL}/background/adityan_profile.jpeg`,
+  email: `mailto:${SOCIAL.email}`,
+  sameAs: [SOCIAL.github, SOCIAL.linkedin],
+  worksFor: { "@type": "Organization", name: "FlightsMojo" },
+  knowsAbout: ["React", "Next.js", "Flutter", "React Native", "TypeScript", "Three.js"],
 };
 
 export default function IntroductionPage() {
   return (
     <div className="flex flex-row gap-10 flex-1">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD).replace(/</g, "\\u003c") }}
+      />
       {/* Left: text content */}
       <div className="flex flex-col gap-8 lg:gap-10 w-full">
         {/* Name + title (phones get a small portrait here; desktop shows the full pixel card on the right) */}

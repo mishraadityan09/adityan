@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { NAV_ITEMS } from "./Sidebar";
+import { NAV_ITEMS } from "@/lib/site";
 import ScrambledText from "@/components/scrambled-text";
 import { MagneticButton } from "@/components/MagneticButton";
 

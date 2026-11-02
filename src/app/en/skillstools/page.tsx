@@ -1,8 +1,14 @@
 import Image from "next/image";
 import type { SkillGroup } from "@/types";
 import { MobilePager } from "@/components/layout/MobilePager";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata = { title: "Skills & Tools | Adityan Mishra" };
+export const metadata = pageMetadata({
+  title: "Skills & Tools",
+  description:
+    "Languages, frameworks and tools Adityan Mishra uses to build web, mobile and 3D experiences — React, Next.js, Flutter, TypeScript, Three.js and more.",
+  path: "/en/skillstools",
+});
 
 const SKILLS: SkillGroup[] = [
   {

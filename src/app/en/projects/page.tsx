@@ -1,8 +1,14 @@
 import type { Project } from "@/types";
 import { ProjectCard } from "@/components/ProjectCard";
 import { MobilePager } from "@/components/layout/MobilePager";
+import { pageMetadata } from "@/lib/site";
 
-export const metadata = { title: "Projects | Adityan Mishra" };
+export const metadata = pageMetadata({
+  title: "Projects",
+  description:
+    "Selected work by Adityan Mishra: a self-hosted Chatwoot support platform that replaced Zendesk, the FlightsMojo Flutter app and Next.js booking site, Cloak, and more.",
+  path: "/en/projects",
+});
 
 const PROJECTS: Project[] = [
   {
