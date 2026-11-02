@@ -6,9 +6,9 @@ export const metadata = { title: "Projects | Adityan Mishra" };
 
 const PROJECTS: Project[] = [
   {
-    title: "Self-Hosted Support Platform — Chatwoot fork (replacing Zendesk)",
+    title: "Self-Hosted Support Platform — Chatwoot fork (replacing Zendesk & Emailgistics)",
     description:
-      "Replaced Zendesk with a self-hosted, FlightsMojo-branded Chatwoot fork — one omnichannel inbox for WhatsApp, email, website chat widget, and API channels across 5 markets. Handles ~7,000 conversations and 22,000+ inbound messages a week (43,000+ conversations so far) and saves about $900/month over Zendesk. Email workflows that replaced Emailgistics, an AI chatbot on WhatsApp and web chat with booking-status lookup and human handoff, a Zendesk-style ticket table, and sticky assignment.",
+      "Replaced Zendesk with a self-hosted, FlightsMojo-branded Chatwoot fork — one omnichannel inbox for WhatsApp, email, website chat widget, and API channels across 5 markets. Handles ~7,000 conversations and 22,000+ inbound messages a week (43,000+ conversations so far) and saves about $900/month net of server and OpenAI API costs by replacing both Zendesk and Emailgistics. Email workflows for the shared mailboxes, an AI chatbot on WhatsApp and web chat with booking-status lookup and human handoff, a Zendesk-style ticket table, and sticky assignment.",
     href: "/en/projects/support-platform",
     previewImage: "/projects/support-platform/weekly-reports.png",
     previewFrame: "browser",

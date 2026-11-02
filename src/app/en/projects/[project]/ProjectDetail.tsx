@@ -143,7 +143,7 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
     title: "Self-Hosted Support Platform (Chatwoot fork)",
     time: "Jul 2026 - Present",
     description:
-      "Replaced Zendesk with a self-hosted, FlightsMojo-branded fork of Chatwoot running on our own server. It brings WhatsApp, email, the website chat widget, and API channels (web ticket forms and TripShield claims) into one omnichannel inbox across 5 markets (IN, AE, US, UK, ID), with team routing and labels. It now handles about 7,000 conversations and 22,000+ inbound messages a week (27,000+ agent replies), with 43,000+ conversations handled since launch, and saves about $900/month compared with Zendesk. Email workflows built inside Chatwoot replaced Emailgistics for the shared mailboxes: per-market and per-purpose inboxes (including the airline-disruption IROP agency mailbox) land in the same queue with automatic labels such as irop, booking_issue and partner_query, priorities, and routing to the Cancellations & Refunds and IROP teams. Built an AI chatbot (Gemini, then OpenAI, with function calling) on WhatsApp and web chat that looks up booking status, answers from Help Centre articles migrated from Zendesk, persists the booking ID on the conversation, auto-resolves quiet chats, and hands off to human agents. On the agent side, the fork adds a Zendesk-style ticket table, in-app ticket tabs with Play / Next queue navigation, sticky assignment that routes returning customers to their last agent, live open-ticket and folder counts in the sidebar, and a booking-ID chip on every conversation. Also set up per-country inbound email through a Postfix relay with Netcore sending, and a CI pipeline that builds tagged, versioned images for each release.",
+      "Replaced Zendesk with a self-hosted, FlightsMojo-branded fork of Chatwoot running on our own server. It brings WhatsApp, email, the website chat widget, and API channels (web ticket forms and TripShield claims) into one omnichannel inbox across 5 markets (IN, AE, US, UK, ID), with team routing and labels. It now handles about 7,000 conversations and 22,000+ inbound messages a week (27,000+ agent replies), with 43,000+ conversations handled since launch, and saves about $900/month net — that is after the server and OpenAI API costs, from replacing both Zendesk and Emailgistics. Email workflows built inside Chatwoot replaced Emailgistics for the shared mailboxes: per-market and per-purpose inboxes (including the airline-disruption IROP agency mailbox) land in the same queue with automatic labels such as irop, booking_issue and partner_query, priorities, and routing to the Cancellations & Refunds and IROP teams. Built an AI chatbot (Gemini, then OpenAI, with function calling) on WhatsApp and web chat that looks up booking status, answers from Help Centre articles migrated from Zendesk, persists the booking ID on the conversation, auto-resolves quiet chats, and hands off to human agents. On the agent side, the fork adds a Zendesk-style ticket table, in-app ticket tabs with Play / Next queue navigation, sticky assignment that routes returning customers to their last agent, live open-ticket and folder counts in the sidebar, and a booking-ID chip on every conversation. Also set up per-country inbound email through a Postfix relay with Netcore sending, and a CI pipeline that builds tagged, versioned images for each release.",
     stack: [
       "Chatwoot",
       "Ruby on Rails",
@@ -159,6 +159,11 @@ const PROJECT_DATA: Record<string, ProjectInfo> = {
       {
         src: "/projects/support-platform/weekly-reports.png",
         caption: "One week of conversations — 6.8K conversations, 22K messages received, 27K sent",
+        frame: "browser",
+      },
+      {
+        src: "/projects/support-platform/inbox.png",
+        caption: "Omnichannel inbox — WhatsApp, email, chat and web tickets with labels, teams and priorities",
         frame: "browser",
       },
     ],
