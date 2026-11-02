@@ -6,6 +6,22 @@ export const metadata = { title: "Projects | Adityan Mishra" };
 
 const PROJECTS: Project[] = [
   {
+    title: "Self-Hosted Support Platform — Chatwoot fork (replacing Zendesk)",
+    description:
+      "Replaced Zendesk with a self-hosted, FlightsMojo-branded Chatwoot fork — one omnichannel inbox for WhatsApp, email, website chat widget, and API channels across 5 markets. Handles ~7,000 conversations and 22,000+ inbound messages a week (43,000+ conversations so far) and saves about $900/month over Zendesk. Email workflows that replaced Emailgistics, an AI chatbot on WhatsApp and web chat with booking-status lookup and human handoff, a Zendesk-style ticket table, and sticky assignment.",
+    href: "/en/projects/support-platform",
+    previewImage: "/projects/support-platform/weekly-reports.png",
+    previewFrame: "browser",
+  },
+  {
+    title: "Help Center Website — help.flightsmojo.in",
+    description:
+      "Customer support portal built with Next.js App Router across 8 country domains. SEO optimization and dynamic routing, running on our self-hosted Chatwoot — articles from the Chatwoot portal API, tickets created through the Chatwoot API, and the Chatwoot chat widget.",
+    href: "/en/projects/help-center",
+    previewImage: "/projects/help-center/home.png",
+    previewFrame: "browser",
+  },
+  {
     title: "FlightsMojo — Flight Booking App (Flutter)",
     description:
       "End-to-end flight booking app for iOS & Android — ~50K Android and ~12K iOS downloads, booking tickets every day with the app alone contributing ₹6–7 lakh in daily revenue. Multi-GDS search (Travelport NDC, Kafila, TripJack), Razorpay payments, Firebase/FCM push notifications, GA4 analytics, and full App Store / Play Store release cycles.",
@@ -35,26 +51,12 @@ const PROJECTS: Project[] = [
     previewImage: "/projects/nxflow/onboarding.png",
   },
   {
-    title: "Help Center Website — help.flightsmojo.in",
-    description:
-      "Customer support portal built with Next.js App Router across 8 country domains. SEO optimization and dynamic routing, running on our self-hosted Chatwoot — articles from the Chatwoot portal API, tickets created through the Chatwoot API, and the Chatwoot chat widget.",
-    href: "/en/projects/help-center",
-    previewImage: "/projects/help-center/home.png",
-    previewFrame: "browser",
-  },
-  {
     title: "FlightsMojo Web Booking — flightsmojo.in",
     description:
       "FlightsMojo's main source of revenue. Next.js flight booking web platform with multi-GDS search, fare comparison, currency localisation, and Trip-Shield upsell. Live in production.",
     href: "/en/projects/flightsmojo-web",
     previewImage: "/projects/flightsmojo-web/search.png",
     previewFrame: "browser",
-  },
-  {
-    title: "Self-Hosted Support Platform — Chatwoot fork (replacing Zendesk)",
-    description:
-      "Replaced Zendesk with a self-hosted, FlightsMojo-branded Chatwoot fork — one omnichannel inbox for WhatsApp, email, website chat widget, and API channels across 5 markets. Handles 10,000–15,000 support tickets a month and cut support costs from $850/month to about $100/month (~88% saving). AI chatbot on WhatsApp and web chat with booking-status lookup and human handoff, Zendesk-style ticket table, and sticky assignment.",
-    href: "/en/projects/support-platform",
   },
   {
     title: "TripShield Claim Portal — tripshield.flightsmojo.in",
