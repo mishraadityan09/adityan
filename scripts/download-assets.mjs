@@ -3,7 +3,7 @@
  * Run: node scripts/download-assets.mjs
  */
 
-import { createWriteStream, mkdirSync } from 'node:fs';
+import { mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 

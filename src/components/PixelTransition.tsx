@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState, CSSProperties } from "react";
 import { gsap } from "gsap";
+import { FINE_POINTER_QUERY, useMediaQuery } from "@/hooks/use-media-query";
 
 interface PixelTransitionProps {
   firstContent: React.ReactNode | string;
@@ -32,16 +33,7 @@ const PixelTransition: React.FC<PixelTransitionProps> = ({
   const delayedCallRef = useRef<gsap.core.Tween | null>(null);
 
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
-  useEffect(() => {
-    const touch =
-      "ontouchstart" in window ||
-      navigator.maxTouchPoints > 0 ||
-      window.matchMedia("(pointer: coarse)").matches;
-
-    setIsTouchDevice(touch);
-  }, []);
+  const isTouchDevice = !useMediaQuery(FINE_POINTER_QUERY);
 
   useEffect(() => {
     const pixelGridEl = pixelGridRef.current;

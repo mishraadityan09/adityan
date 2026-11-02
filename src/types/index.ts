@@ -8,6 +8,8 @@ export interface Project {
   description: string;
   href: string;
   previewImage?: string;
+  /** Shape of the preview screenshot — decides how the mobile card thumbnail is cropped. Defaults to "phone". */
+  previewFrame?: "phone" | "browser";
 }
 
 export interface SkillItem {

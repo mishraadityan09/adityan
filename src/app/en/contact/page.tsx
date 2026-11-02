@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useActionState, useEffect, useRef, useState } from "react";
 import { sendContactMessage } from "@/lib/actions/contact";
 import { initialContactFormState } from "@/lib/actions/contact-types";
+import { MobilePager } from "@/components/layout/MobilePager";
 
 export default function ContactPage() {
   return (
@@ -14,9 +13,9 @@ export default function ContactPage() {
         Contact
       </h1>
 
-      <div className="flex flex-col md:flex-row gap-10">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-10">
         {/* Left: contact info */}
-        <div className="flex flex-col gap-y-10">
+        <div className="flex flex-col gap-y-6 md:gap-y-10">
           <ContactInfoItem
             label="Email"
             href="mailto:adityanmishra36@gmail.com"
@@ -35,23 +34,7 @@ export default function ContactPage() {
         <ContactForm />
       </div>
 
-      {/* Mobile prev/next */}
-      <div className="lg:hidden flex justify-between flex-1 items-end">
-        <Link
-          href="/en/experience"
-          className="h-fit flex items-center gap-1 uppercase rounded-full shadow shadow-stone-100 px-3 py-2 text-sm"
-        >
-          <ArrowLeft className="w-5 h-5" aria-hidden />
-          prev
-        </Link>
-        <Link
-          href="/en"
-          className="h-fit flex items-center gap-1 uppercase rounded-full shadow shadow-stone-100 px-3 py-2 text-sm"
-        >
-          next
-          <ArrowRight className="w-5 h-5" aria-hidden />
-        </Link>
-      </div>
+      <MobilePager />
     </>
   );
 }
@@ -75,10 +58,10 @@ function ContactInfoItem({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="animate-underline w-fit h-fit flex gap-4 items-center"
+          className="animate-underline w-fit min-h-11 flex gap-4 items-center"
         >
           <Image src={iconSrc} alt={label} width={25} height={25} style={{ height: "auto" }} />
-          <p className="break-all text-sm">{display}</p>
+          <p className="[overflow-wrap:anywhere] text-sm">{display}</p>
         </a>
       </div>
     </div>
@@ -94,24 +77,22 @@ function ContactForm() {
     initialContactFormState
   );
 
+  const [handledState, setHandledState] = useState(state);
+  if (state !== handledState) {
+    setHandledState(state);
+    if (state.status === "ok") setContent("");
+  }
+
   useEffect(() => {
-    if (state.status === "ok") {
-      formRef.current?.reset();
-      setContent("");
-    }
+    if (state.status === "ok") formRef.current?.reset();
   }, [state]);
 
   return (
     <div className="flex flex-col gap-6 rounded-xl border border-border bg-card py-6 text-card-foreground shadow-sm w-full max-w-sm">
       {/* Card header */}
-      <div className="flex items-start justify-between gap-2 px-6">
+      <div className="flex flex-col gap-1 px-6">
         <span className="font-semibold leading-none">Your message</span>
-        <button
-          type="button"
-          className="inline-flex items-center gap-2 rounded-md border border-input bg-input/30 hover:bg-input/50 px-4 py-2 text-sm font-medium transition-all"
-        >
-          Default
-        </button>
+        <span className="text-xs text-muted-foreground">I usually reply within a day.</span>
       </div>
 
       {/* Card content */}
@@ -128,7 +109,7 @@ function ContactForm() {
               name="email"
               required
               placeholder="your-email@gmail.com"
-              className="h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-[color,box-shadow]"
+              className="h-11 lg:h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base lg:text-sm placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-[color,box-shadow]"
             />
           </Field>
           <Field label="Topic">
@@ -137,7 +118,7 @@ function ContactForm() {
               name="topic"
               required
               placeholder="What's the topic today?"
-              className="h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-[color,box-shadow]"
+              className="h-11 lg:h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base lg:text-sm placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-[color,box-shadow]"
             />
           </Field>
           <Field label="Content">
@@ -150,7 +131,7 @@ function ContactForm() {
                 maxLength={MAX}
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
-                className="w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-[color,box-shadow] resize-none"
+                className="w-full rounded-md border border-input bg-transparent px-3 py-2 text-base lg:text-sm placeholder:text-muted-foreground outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 transition-[color,box-shadow] resize-none"
               />
               <span className="absolute bottom-2 right-3 text-xs text-muted-foreground">
                 {content.length}/{MAX}
@@ -160,7 +141,7 @@ function ContactForm() {
           <button
             type="submit"
             disabled={pending}
-            className="w-full rounded-md bg-primary text-primary-foreground py-2 text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full min-h-11 lg:min-h-9 rounded-md bg-primary text-primary-foreground py-2 text-sm font-medium hover:opacity-90 active:opacity-80 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {pending ? "Sending…" : "Send"}
           </button>

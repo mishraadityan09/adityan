@@ -27,14 +27,21 @@ export default function ThreeGLBViewer({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Phones: cap the pixel ratio and skip MSAA. Fill-rate on a 3x-DPR antialiased canvas is the
+    // single biggest cost in this component and the difference is invisible on a small screen.
+    const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+    const pixelRatio = Math.min(window.devicePixelRatio, coarsePointer ? 1.5 : 2);
+
     // ── Renderer ──────────────────────────────────────────────────────────────
     const renderer = new THREE.WebGLRenderer({
       canvas,
-      antialias: true,
+      antialias: pixelRatio < 2,
       alpha: true,
+      powerPreference: "high-performance",
     });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    renderer.setPixelRatio(pixelRatio);
+    // `false` keeps the canvas sized by CSS (100% of its box) so the ResizeObserver below keeps working.
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight, false);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.3;
 
@@ -73,6 +80,9 @@ export default function ThreeGLBViewer({
     controls.addEventListener("start", () => {
       controls.autoRotate = false;
     });
+    // OrbitControls sets touch-action: none, which would trap vertical swipes over the model and
+    // stop the page from scrolling. Let the browser keep vertical pans; horizontal drags still rotate.
+    if (coarsePointer) canvas.style.touchAction = "pan-y";
 
     // ── GLB Loader ────────────────────────────────────────────────────────────
     const dracoLoader = new DRACOLoader();
@@ -108,29 +118,64 @@ export default function ThreeGLBViewer({
     const ro = new ResizeObserver(() => {
       const w = canvas.clientWidth;
       const h = canvas.clientHeight;
-      renderer.setSize(w, h);
+      if (!w || !h) return;
+      renderer.setSize(w, h, false);
       camera.aspect = w / h;
       camera.updateProjectionMatrix();
     });
     ro.observe(canvas);
 
-    // ── Render loop ───────────────────────────────────────────────────────────
-    let raf: number;
+    // ── Render loop — only runs while the canvas is on screen and the tab is visible ──
+    let raf = 0;
+    let running = false;
+    let inView = true;
+
     const tick = () => {
       raf = requestAnimationFrame(tick);
       controls.update();
       renderer.render(scene, camera);
     };
-    tick();
+    const start = () => {
+      if (running) return;
+      running = true;
+      tick();
+    };
+    const stop = () => {
+      running = false;
+      cancelAnimationFrame(raf);
+    };
+    const sync = () => {
+      if (inView && !document.hidden) start();
+      else stop();
+    };
+
+    const io = new IntersectionObserver(([entry]) => {
+      inView = entry.isIntersecting;
+      sync();
+    });
+    io.observe(canvas);
+    document.addEventListener("visibilitychange", sync);
+    start();
 
     // ── Cleanup ───────────────────────────────────────────────────────────────
     return () => {
-      cancelAnimationFrame(raf);
+      stop();
+      io.disconnect();
+      document.removeEventListener("visibilitychange", sync);
       ro.disconnect();
       controls.dispose();
+      if (model) {
+        scene.remove(model);
+        model.traverse((obj) => {
+          if (obj instanceof THREE.Mesh) {
+            obj.geometry.dispose();
+            const materials = Array.isArray(obj.material) ? obj.material : [obj.material];
+            materials.forEach((m) => m.dispose());
+          }
+        });
+      }
       renderer.dispose();
       dracoLoader.dispose();
-      if (model) scene.remove(model);
     };
   }, [src, autoRotate, enableControls, cameraDistance]);
 

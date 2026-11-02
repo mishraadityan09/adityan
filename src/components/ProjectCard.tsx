@@ -3,15 +3,66 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import type { Project } from "@/types";
+import { FINE_POINTER_QUERY, useMediaQuery } from "@/hooks/use-media-query";
+import { cn } from "@/lib/utils";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 
+const CARD_SURFACE =
+  "block relative overflow-hidden bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)]";
+
+/**
+ * Mouse devices get the 3D tilt + hover preview; touch devices get a plain card with the
+ * preview image inline. Splitting the two keeps 14 spring-driven 3D layers off phones.
+ */
 export function ProjectCard({ project }: { project: Project }) {
+  const finePointer = useMediaQuery(FINE_POINTER_QUERY);
+  return finePointer ? <TiltCard project={project} /> : <TouchCard project={project} />;
+}
+
+function TouchCard({ project }: { project: Project }) {
+  return (
+    <Link
+      href={project.href}
+      className={`${CARD_SURFACE} group transition-[transform,background-color] duration-200 active:scale-[0.98] active:bg-foreground/[0.06]`}
+    >
+      {project.previewImage && (
+        <div className="relative h-40 w-full border-b border-foreground/[0.06] bg-foreground/[0.03]">
+          <Image
+            src={project.previewImage}
+            alt=""
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className={cn(
+              "object-cover",
+              // Phone screenshots lead with their header; browser screenshots lead with chrome, so show their middle.
+              project.previewFrame === "browser" ? "object-center" : "object-top"
+            )}
+          />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-background/40 to-transparent" />
+        </div>
+      )}
+      <div className="flex flex-col gap-2 p-5">
+        <p className="font-bold text-lg leading-snug tracking-wide text-foreground">{project.title}</p>
+        <p className="line-clamp-3 text-[15px] text-foreground/60 font-light leading-relaxed">
+          {project.description}
+        </p>
+        <span className="mt-1 inline-flex items-center gap-1 text-xs font-medium uppercase tracking-[0.18em] text-foreground/50">
+          View project
+          <ArrowUpRight className="w-3.5 h-3.5" aria-hidden />
+        </span>
+      </div>
+    </Link>
+  );
+}
+
+function TiltCard({ project }: { project: Project }) {
   const ref = useRef<HTMLAnchorElement>(null);
 
   const x = useMotionValue(0);
@@ -26,14 +77,8 @@ export function ProjectCard({ project }: { project: Project }) {
   const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!ref.current) return;
     const rect = ref.current.getBoundingClientRect();
-    const width = rect.width;
-    const height = rect.height;
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    const xPct = mouseX / width - 0.5;
-    const yPct = mouseY / height - 0.5;
-    x.set(xPct);
-    y.set(yPct);
+    x.set((e.clientX - rect.left) / rect.width - 0.5);
+    y.set((e.clientY - rect.top) / rect.height - 0.5);
   };
 
   const handleMouseLeave = () => {
@@ -50,7 +95,7 @@ export function ProjectCard({ project }: { project: Project }) {
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-          className="block relative group cursor-pointer overflow-visible bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl p-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] backdrop-blur-xl transition-colors duration-500 ease-out hover:bg-foreground/[0.08]"
+          className={`${CARD_SURFACE} group cursor-pointer overflow-visible p-6 transition-colors duration-500 ease-out hover:bg-foreground/[0.08]`}
         >
           {/* Dynamic Glow Shadow under the card interacting on hover */}
           <div className="absolute inset-0 bg-transparent rounded-3xl z-[-1] transition-shadow duration-500 group-hover:shadow-[0_12px_48px_-12px_var(--main)]" />

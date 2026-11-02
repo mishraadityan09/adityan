@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import PixelTransition from "@/components/PixelTransition";
+import { MobilePager } from "@/components/layout/MobilePager";
+import { cn } from "@/lib/utils";
 
 export const metadata = {
   title: "Adityan Mishra — Frontend Developer",
@@ -11,18 +13,26 @@ export default function IntroductionPage() {
   return (
     <div className="flex flex-row gap-10 flex-1">
       {/* Left: text content */}
-      <div className="flex flex-col gap-10 w-full">
-        {/* Name + title */}
-        <div className="flex flex-col gap-y-3">
-          <h1
-            itemProp="name"
-            className="topic"
-          >
-            Adityan Mishra
-          </h1>
-          <p className="md:text-xl uppercase font-normal text-lg">
-            Frontend Developer — React · Next.js · Flutter
-          </p>
+      <div className="flex flex-col gap-8 lg:gap-10 w-full">
+        {/* Name + title (phones get a small portrait here; desktop shows the full pixel card on the right) */}
+        <div className="flex items-center gap-4 sm:gap-5">
+          <Image
+            src="/background/adityan_profile.jpeg"
+            alt="Portrait of Adityan Mishra"
+            width={160}
+            height={213}
+            sizes="80px"
+            className="lg:hidden h-24 w-[72px] sm:h-28 sm:w-[84px] shrink-0 rounded-2xl object-cover object-top border border-foreground/10 shadow-[0_8px_24px_-8px_rgba(0,0,0,0.5)]"
+            priority
+          />
+          <div className="flex min-w-0 flex-col gap-y-2 lg:gap-y-3">
+            <h1 itemProp="name" className="topic">
+              Adityan Mishra
+            </h1>
+            <p className="text-sm sm:text-lg md:text-xl uppercase font-normal">
+              Frontend Developer — React · Next.js · Flutter
+            </p>
+          </div>
         </div>
 
         {/* Bio */}
@@ -40,7 +50,7 @@ export default function IntroductionPage() {
         </div>
 
         {/* Social links */}
-        <div className="flex flex-wrap gap-10">
+        <div className="flex flex-wrap gap-3 sm:gap-4 lg:gap-10">
           <SocialLink
             href="https://www.linkedin.com/in/adityan-mishra-61ba18162/"
             label="LinkedIn"
@@ -50,6 +60,7 @@ export default function IntroductionPage() {
             href="https://github.com/mishraadityan09"
             label="GitHub"
             iconSrc="/icons-software/github.svg"
+            invertInDark
           />
           <SocialLink
             href="/cv/Adityan.pdf"
@@ -71,11 +82,7 @@ export default function IntroductionPage() {
           <p>Aug 2017 – Aug 2021</p>
         </div>
 
-        {/* Mobile prev/next */}
-        <div className="lg:hidden flex justify-between flex-1 items-end">
-          <PrevNextLink href="/en/contact" direction="prev" />
-          <PrevNextLink href="/en/projects" direction="next" />
-        </div>
+        <MobilePager />
       </div>
 
       {/* Right: actor image — desktop only */}
@@ -121,40 +128,29 @@ function SocialLink({
   href,
   label,
   iconSrc,
+  invertInDark = false,
 }: {
   href: string;
   label: string;
   iconSrc: string;
+  invertInDark?: boolean;
 }) {
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="animate-hover-btn inline-flex items-center gap-4 px-3 py-2 rounded-md border border-white/15 bg-white/[0.045] text-sm font-medium w-fit h-fit"
+      className="animate-hover-btn inline-flex items-center gap-3 sm:gap-4 min-h-11 px-3 py-2 rounded-md border border-foreground/15 bg-foreground/[0.045] active:bg-foreground/[0.1] text-sm font-medium w-fit h-fit"
     >
-      <Image src={iconSrc} alt={label} width={22} height={22} className="shrink-0" style={{ height: "auto" }} />
+      <Image
+        src={iconSrc}
+        alt=""
+        width={22}
+        height={22}
+        className={cn("h-[22px] w-[22px] shrink-0", invertInDark && "dark:invert")}
+      />
       {label}
       <ArrowUpRight className="w-4 h-4" aria-hidden />
     </a>
-  );
-}
-
-function PrevNextLink({
-  href,
-  direction,
-}: {
-  href: string;
-  direction: "prev" | "next";
-}) {
-  return (
-    <Link
-      href={href}
-      className="h-fit flex items-center gap-1 uppercase rounded-full shadow shadow-stone-100 px-3 py-2 text-sm"
-    >
-      {direction === "prev" && <ArrowLeft className="w-5 h-5" aria-hidden />}
-      {direction}
-      {direction === "next" && <ArrowRight className="w-5 h-5" aria-hidden />}
-    </Link>
   );
 }

@@ -303,21 +303,27 @@ export default function ProjectDetail({ project }: { project: string }) {
       const el = boxInfoRef.current;
       if (!el) return;
 
-      gsap.to(el, {
-        filter: "blur(5px)",
-        opacity: 0,
-        scale: 0.9,
-        scrollTrigger: {
-          trigger: el,
-          start: "bottom bottom-=100",
-          end: "bottom top",
-          pin: true,
-          pinSpacing: false,
-          scrub: 0.5,
-          pinType: "transform",
-          anticipatePin: 1,
-        },
+      // Desktop + mouse only. Pinning plus an animated blur() filter re-rasterizes the hero on every
+      // scroll frame — exactly the kind of work that makes phones stutter, so they skip it.
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 1024px) and (hover: hover) and (prefers-reduced-motion: no-preference)", () => {
+        gsap.to(el, {
+          filter: "blur(5px)",
+          opacity: 0,
+          scale: 0.9,
+          scrollTrigger: {
+            trigger: el,
+            start: "bottom bottom-=100",
+            end: "bottom top",
+            pin: true,
+            pinSpacing: false,
+            scrub: 0.5,
+            pinType: "transform",
+            anticipatePin: 1,
+          },
+        });
       });
+      return () => mm.revert();
     },
     { dependencies: [hasModel] }
   );
@@ -377,7 +383,7 @@ export default function ProjectDetail({ project }: { project: string }) {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2.5 text-sm border border-foreground/[0.12] bg-foreground/[0.04] backdrop-blur-sm px-4 py-2 rounded-full transition-all duration-300 ease-out hover:border-[var(--main)]/40 hover:bg-foreground/[0.08] hover:shadow-[0_8px_28px_-8px_var(--main)]"
+                className="group inline-flex items-center gap-2.5 text-sm border border-foreground/[0.12] bg-foreground/[0.04] px-4 py-2 rounded-full transition-all duration-300 ease-out hover:border-[var(--main)]/40 hover:bg-foreground/[0.08] hover:shadow-[0_8px_28px_-8px_var(--main)]"
               >
                 <Icon className="w-4 h-4 text-foreground/70 group-hover:text-foreground transition-colors shrink-0" />
                 <span className="leading-tight flex flex-col items-start">
@@ -409,7 +415,7 @@ export default function ProjectDetail({ project }: { project: string }) {
       <p className="text-sm font-semibold uppercase tracking-widest text-foreground/40">Tech Stack</p>
       <div className="flex flex-wrap gap-2">
         {(data ? data.stack : ["Next.js", "GSAP", "Tailwind CSS"]).map((tag) => (
-          <span key={tag} className="px-3 py-1 bg-white/10 rounded-md text-sm backdrop-blur-sm border border-white/5">
+          <span key={tag} className="px-3 py-1 bg-white/10 rounded-md text-sm border border-white/5">
             {tag}
           </span>
         ))}
@@ -421,7 +427,7 @@ export default function ProjectDetail({ project }: { project: string }) {
 
   const heroVisualBlock = hasModel && data?.glbSrc ? (
     <div className="flex flex-col gap-2 lg:col-start-2 lg:row-start-1 lg:row-span-3">
-      <div className="relative w-full aspect-square max-h-[60vh] lg:max-h-none bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] backdrop-blur-2xl overflow-hidden hover:shadow-[0_12px_48px_-12px_var(--main)] transition-shadow duration-500 ease-out">
+      <div className="relative w-full aspect-square max-h-[60vh] lg:max-h-none bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] overflow-hidden hover:shadow-[0_12px_48px_-12px_var(--main)] transition-shadow duration-500 ease-out">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_75%,color-mix(in_oklch,var(--main)_18%,transparent),transparent_60%)]"
@@ -440,7 +446,7 @@ export default function ProjectDetail({ project }: { project: string }) {
     </div>
   ) : heroImage ? (
     <div className="flex flex-col gap-2 lg:col-start-2 lg:row-start-1 lg:row-span-3">
-      <div className={`relative w-full ${heroImage.frame === "browser" ? "aspect-[16/10]" : "aspect-[3/4]"} max-h-[70vh] lg:max-h-none bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] backdrop-blur-2xl overflow-hidden hover:shadow-[0_12px_48px_-12px_var(--main)] transition-shadow duration-500 ease-out`}>
+      <div className={`relative w-full ${heroImage.frame === "browser" ? "aspect-[16/10]" : "aspect-[3/4]"} max-h-[70vh] lg:max-h-none bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] overflow-hidden hover:shadow-[0_12px_48px_-12px_var(--main)] transition-shadow duration-500 ease-out`}>
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_75%,color-mix(in_oklch,var(--main)_18%,transparent),transparent_60%)]"
@@ -464,7 +470,7 @@ export default function ProjectDetail({ project }: { project: string }) {
     <div className="w-full min-w-0 flex flex-col gap-y-10 relative">
       <Link
         href="/en/projects"
-        className="flex items-center gap-2 text-sm text-foreground/60 hover:text-foreground transition-colors w-fit border border-white/10 bg-white/5 px-4 py-2 rounded-full"
+        className="flex items-center gap-2 min-h-10 text-sm text-foreground/60 hover:text-foreground active:bg-foreground/[0.08] transition-colors w-fit border border-foreground/10 bg-foreground/5 px-4 py-2 rounded-full"
       >
         <ArrowLeftIcon className="w-4 h-4" /> Back to Projects
       </Link>
@@ -501,9 +507,8 @@ export default function ProjectDetail({ project }: { project: string }) {
             </p>
           </div>
           <div
-            data-lenis-prevent
             className="
-              flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 -mx-4 px-4
+              flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 -mx-5 px-5 scroll-pl-5
               [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
               [touch-action:pan-x]
               sm:grid sm:grid-cols-2 sm:overflow-visible sm:gap-5 sm:mx-0 sm:px-0 sm:pb-0
@@ -516,11 +521,11 @@ export default function ProjectDetail({ project }: { project: string }) {
                 data-gallery-tile
                 className="
                   group flex flex-col gap-2
-                  shrink-0 w-[78vw] snap-start
+                  shrink-0 w-[min(72vw,300px)] snap-start
                   sm:w-auto sm:shrink
                 "
               >
-                <div className={`relative w-full ${img.frame === "browser" ? "aspect-[16/10]" : "aspect-[3/6]"} bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] backdrop-blur-xl transition-shadow duration-500 ease-out group-hover:shadow-[0_12px_48px_-12px_var(--main)]`}>
+                <div className={`relative w-full ${img.frame === "browser" ? "aspect-[16/10]" : "aspect-[9/16]"} bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-shadow duration-500 ease-out group-hover:shadow-[0_12px_48px_-12px_var(--main)]`}>
                   <Image
                     src={img.src}
                     alt={img.caption}

@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { ExperienceItem } from "@/types";
+import { MobilePager } from "@/components/layout/MobilePager";
 
 export const metadata = { title: "Experience | Adityan Mishra" };
 
@@ -81,29 +80,13 @@ export default function ExperiencePage() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-8 lg:gap-10">
         {EXPERIENCE.map((job) => (
           <ExperienceCard key={job.company + job.period} job={job} />
         ))}
       </div>
 
-      {/* Mobile prev/next */}
-      <div className="lg:hidden flex justify-between flex-1 items-end">
-        <Link
-          href="/en/skillstools"
-          className="h-fit flex items-center gap-1 uppercase rounded-full shadow shadow-stone-100 px-3 py-2 text-sm"
-        >
-          <ArrowLeft className="w-5 h-5" aria-hidden />
-          prev
-        </Link>
-        <Link
-          href="/en/contact"
-          className="h-fit flex items-center gap-1 uppercase rounded-full shadow shadow-stone-100 px-3 py-2 text-sm"
-        >
-          next
-          <ArrowRight className="w-5 h-5" aria-hidden />
-        </Link>
-      </div>
+      <MobilePager />
     </>
   );
 }
@@ -111,15 +94,15 @@ export default function ExperiencePage() {
 function ExperienceCard({ job }: { job: ExperienceItem }) {
   return (
     <div className="flex flex-col gap-3 border-l-2 border-main/40 pl-5">
-      <div className="flex flex-col gap-0.5">
-        <div className="flex items-start justify-between gap-4 flex-wrap">
+      <div className="flex flex-col gap-1">
+        <div className="flex items-baseline justify-between gap-x-4 gap-y-0.5 flex-wrap">
           <p className="font-bold text-base uppercase tracking-wide">{job.company}</p>
-          <p className="text-xs text-muted-foreground shrink-0">{job.location}</p>
+          <p className="text-xs text-muted-foreground tabular-nums shrink-0">{job.period}</p>
         </div>
-        <div className="flex items-start justify-between gap-4 flex-wrap">
-          <p className="text-sm text-main">{job.role}</p>
-          <p className="text-xs text-muted-foreground shrink-0">{job.period}</p>
-        </div>
+        <p className="text-sm text-main">
+          {job.role}
+          <span className="text-muted-foreground"> · {job.location}</span>
+        </p>
       </div>
       <ul className="flex flex-col gap-2 list-none">
         {job.points.map((point, i) => (

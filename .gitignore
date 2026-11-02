@@ -47,3 +47,6 @@ next-env.d.ts
 
 # Local temp files
 temp/
+
+# Browser QA artifacts (Playwright MCP)
+.playwright-mcp/

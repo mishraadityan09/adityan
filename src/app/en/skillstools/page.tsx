@@ -1,7 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import type { SkillGroup } from "@/types";
+import { MobilePager } from "@/components/layout/MobilePager";
 
 export const metadata = { title: "Skills & Tools | Adityan Mishra" };
 
@@ -65,9 +64,9 @@ export default function SkillsPage() {
         <h1 itemProp="skillstools" className="topic">
           Skills &amp; Tools
         </h1>
-        <h3 className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground">
           Languages, frameworks, and tools I use to build web, mobile, and 3D experiences.
-        </h3>
+        </p>
       </div>
 
       {/* Skill groups */}
@@ -75,42 +74,23 @@ export default function SkillsPage() {
         {SKILLS.map((group) => (
           <div key={group.category} className="flex flex-col gap-3">
             <p className="title">{group.category}</p>
-            <div className="flex flex-wrap gap-5">
+            <ul className="flex flex-wrap gap-3 sm:gap-4 lg:gap-5">
               {group.items.map((skill) => (
                 <SkillBadge key={skill.name} skill={skill} />
               ))}
-            </div>
+            </ul>
           </div>
         ))}
       </div>
 
-      {/* Mobile prev/next */}
-      <div className="lg:hidden flex justify-between flex-1 items-end">
-        <Link
-          href="/en/projects"
-          className="h-fit flex items-center gap-1 uppercase rounded-full shadow shadow-stone-100 px-3 py-2 text-sm"
-        >
-          <ArrowLeft className="w-5 h-5" aria-hidden />
-          prev
-        </Link>
-        <Link
-          href="/en/experience"
-          className="h-fit flex items-center gap-1 uppercase rounded-full shadow shadow-stone-100 px-3 py-2 text-sm"
-        >
-          next
-          <ArrowRight className="w-5 h-5" aria-hidden />
-        </Link>
-      </div>
+      <MobilePager />
     </>
   );
 }
 
 function SkillBadge({ skill }: { skill: SkillGroup["items"][number] }) {
   return (
-    <button
-      type="button"
-      className="inline-flex shrink-0 items-center gap-2 rounded-md border border-input bg-input/30 hover:bg-input/50 px-4 py-2 text-sm font-medium transition-colors"
-    >
+    <li className="inline-flex shrink-0 items-center gap-2 rounded-md border border-input bg-input/30 hover:bg-input/50 px-4 py-2 text-sm font-medium transition-colors">
       {skill.iconSrc && (
         <Image
           src={skill.iconSrc}
@@ -122,6 +102,6 @@ function SkillBadge({ skill }: { skill: SkillGroup["items"][number] }) {
         />
       )}
       {skill.name}
-    </button>
+    </li>
   );
 }
