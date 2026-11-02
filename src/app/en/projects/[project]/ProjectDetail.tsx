@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/all";
 import Link from "next/link";
 import { ArrowLeftIcon, ExternalLinkIcon } from "lucide-react";
 import GLBViewer from "@/components/GLBViewer";
+import { ImageLightbox } from "@/components/ImageLightbox";
 
 // Brand-accurate platform glyphs (App Store / Play Store) — kept inline so they pick up currentColor.
 const AppleGlyph = (props: React.SVGProps<SVGSVGElement>) => (
@@ -306,6 +307,11 @@ export default function ProjectDetail({ project }: { project: string }) {
       : data.images.slice(1)
     : [];
 
+  // Tap-to-enlarge for every screenshot (hero + gallery share one index space).
+  const lightboxImages = (data?.images ?? []).map((img) => ({ src: img.src, alt: img.caption, caption: img.caption }));
+  const galleryOffset = hasModel ? 0 : 1;
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
   useGSAP(
     () => {
       // Cinematic scroll-blur only fits pages with a 3D hero — on text-only project pages
@@ -458,7 +464,12 @@ export default function ProjectDetail({ project }: { project: string }) {
     </div>
   ) : heroImage ? (
     <div className="flex flex-col gap-2 lg:col-start-2 lg:row-start-1 lg:row-span-3">
-      <div className={`relative w-full ${heroImage.frame === "browser" ? "aspect-[16/10]" : "aspect-[3/4]"} max-h-[70vh] lg:max-h-none bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] overflow-hidden hover:shadow-[0_12px_48px_-12px_var(--main)] transition-shadow duration-500 ease-out`}>
+      <button
+        type="button"
+        onClick={() => setLightboxIndex(0)}
+        aria-label={`View ${heroImage.caption} full size`}
+        className={`block w-full text-left cursor-zoom-in relative ${heroImage.frame === "browser" ? "aspect-[16/10]" : "aspect-[3/4]"} max-h-[70vh] lg:max-h-none bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] overflow-hidden hover:shadow-[0_12px_48px_-12px_var(--main)] active:scale-[0.99] transition-[box-shadow,transform] duration-500 ease-out`}
+      >
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_75%,color-mix(in_oklch,var(--main)_18%,transparent),transparent_60%)]"
@@ -471,7 +482,7 @@ export default function ProjectDetail({ project }: { project: string }) {
           className="object-contain p-4"
           priority
         />
-      </div>
+      </button>
       <p className="text-xs text-foreground/40 uppercase tracking-widest text-center lg:text-left">
         {heroImage.caption}
       </p>
@@ -527,7 +538,7 @@ export default function ProjectDetail({ project }: { project: string }) {
               lg:grid-cols-3
             "
           >
-            {galleryImages.map((img) => (
+            {galleryImages.map((img, i) => (
               <figure
                 key={img.src}
                 data-gallery-tile
@@ -537,7 +548,12 @@ export default function ProjectDetail({ project }: { project: string }) {
                   sm:w-auto sm:shrink
                 "
               >
-                <div className={`relative w-full ${img.frame === "browser" ? "aspect-[16/10]" : "aspect-[9/16]"} bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] transition-shadow duration-500 ease-out group-hover:shadow-[0_12px_48px_-12px_var(--main)]`}>
+                <button
+                  type="button"
+                  onClick={() => setLightboxIndex(i + galleryOffset)}
+                  aria-label={`View ${img.caption} full size`}
+                  className={`block w-full text-left cursor-zoom-in relative ${img.frame === "browser" ? "aspect-[16/10]" : "aspect-[9/16]"} bg-foreground/[0.03] border border-foreground/[0.08] rounded-3xl overflow-hidden shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] active:scale-[0.98] transition-[box-shadow,transform] duration-500 ease-out group-hover:shadow-[0_12px_48px_-12px_var(--main)]`}
+                >
                   <Image
                     src={img.src}
                     alt={img.caption}
@@ -545,7 +561,7 @@ export default function ProjectDetail({ project }: { project: string }) {
                     sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 78vw"
                     className="object-contain p-3 transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                   />
-                </div>
+                </button>
                 <figcaption className="text-xs text-foreground/50 uppercase tracking-widest">
                   {img.caption}
                 </figcaption>
@@ -554,6 +570,13 @@ export default function ProjectDetail({ project }: { project: string }) {
           </div>
         </section>
       )}
+
+      <ImageLightbox
+        images={lightboxImages}
+        index={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        onNavigate={setLightboxIndex}
+      />
     </div>
   );
 }
